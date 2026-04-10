@@ -1,4 +1,10 @@
+"use client";
+
+import { useLanguage } from "./LanguageProvider";
+
 export default function SiteFooter() {
+  const { t } = useLanguage();
+
   return (
     <footer className="border-t border-zinc-800">
       <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-3 px-6 py-6 text-sm text-zinc-400 md:flex-row md:items-center md:justify-between">
@@ -7,7 +13,7 @@ export default function SiteFooter() {
           <span className="text-sm tracking-[0.18em] text-zinc-500">◇</span>
           <span className="h-px w-14 bg-zinc-800" />
         </div>
-        <p>© 2026 Artem Diatlenko. All rights reserved.</p>
+        <p>{t.footer.rights}</p>
 
         <div className="flex items-center gap-3">
           <a

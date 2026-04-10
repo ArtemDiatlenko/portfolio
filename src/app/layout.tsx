@@ -6,6 +6,7 @@ import HeaderMenu from "./components/HeaderMenu";
 import LanguageSwitch from "./components/LanguageSwitch";
 import SiteFooter from "./components/SiteFooter";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
+import { LanguageProvider } from "./components/LanguageProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,6 @@ export const metadata: Metadata = {
   title: "Artem Diatlenko | Frontend Developer",
   description: "Personal portfolio website of Artem Diatlenko, Frontend Developer.",
 };
-
 
 function SiteHeader() {
   return (
@@ -42,7 +42,6 @@ function SiteHeader() {
   );
 }
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,11 +53,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-zinc-950 text-zinc-100 flex flex-col">
-        <ScrollToTopOnRouteChange />
-        <SiteHeader />
+        <LanguageProvider>
+          <ScrollToTopOnRouteChange />
+          <SiteHeader />
 
-        <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10">{children}</main>
-        <SiteFooter />
+          <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10">{children}</main>
+          <SiteFooter />
+        </LanguageProvider>
       </body>
     </html>
   );

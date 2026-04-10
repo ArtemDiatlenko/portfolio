@@ -1,3 +1,7 @@
+"use client";
+
+import { useLanguage } from "../components/LanguageProvider";
+
 const contactLinks = [
   {
     label: "Email",
@@ -36,29 +40,20 @@ function ContactCard({ label, value, href }: ContactCardProps) {
       className="group rounded-3xl border border-zinc-800 bg-white/[0.03] p-6 transition duration-300 hover:border-zinc-700 hover:bg-white/[0.04]"
     >
       <p className="text-sm uppercase tracking-[0.18em] text-zinc-500">{label}</p>
-      <p className="mt-3 text-lg text-zinc-200 transition group-hover:text-white">
-        {value}
-      </p>
+      <p className="mt-3 text-lg text-zinc-200 transition group-hover:text-white">{value}</p>
     </a>
   );
 }
 
 export default function ContactPage() {
+  const { t } = useLanguage();
+
   return (
     <section className="space-y-12">
       <div className="animate-enter space-y-4">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-          Contact
-        </p>
-        <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          Let’s get in touch.
-        </h1>
-        <p className="max-w-2xl text-lg leading-8 text-zinc-400">
-          If you want to discuss a project, collaboration, or an opportunity,
-          you can reach me through the channels below. I’m mainly focused on
-          frontend, but I’d also be glad to gain backend experience and grow in
-          a broader development environment.
-        </p>
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">{t.contact.label}</p>
+        <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{t.contact.title}</h1>
+        <p className="max-w-2xl text-lg leading-8 text-zinc-400">{t.contact.intro}</p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -74,19 +69,10 @@ export default function ContactPage() {
         </div>
 
         <div className="animate-enter animate-delay-2 rounded-3xl border border-zinc-800 bg-white/[0.03] p-8">
-          <h2 className="text-2xl font-semibold text-white">Availability</h2>
+          <h2 className="text-2xl font-semibold text-white">{t.contact.availability}</h2>
           <div className="mt-5 space-y-5 text-zinc-400 leading-8">
-            <p>
-              I’m currently open to frontend-focused opportunities,
-              collaboration, and product work where clarity, structure, and
-              strong UI matter. At the same time, I’d also be interested in
-              gaining hands-on backend experience as part of a real project or
-              team.
-            </p>
-            <p>
-              The best way to reach me is by email, LinkedIn, or phone. If your
-              message is relevant, I’ll get back to you as soon as possible.
-            </p>
+            <p>{t.contact.availabilityP1}</p>
+            <p>{t.contact.availabilityP2}</p>
           </div>
         </div>
       </div>

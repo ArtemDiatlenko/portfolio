@@ -1,10 +1,30 @@
-# Portfolio Repository
+# Portfolio
 
-This repository contains Artem Diatlenko's portfolio website.
+Repository for Artem Diatlenko's portfolio website.
+
+## Overview
+
+This project is a frontend portfolio focused on clean presentation, responsive layouts, smooth navigation, and multilingual content.
 
 ## Project Layout
 
 - `Portfolio/` - the Vite + React application
+
+## Pages
+
+- Home
+- About
+- Skills
+- Projects
+- Contact
+
+## Tech Stack
+
+- React 19
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS 4
 
 ## Getting Started
 
@@ -16,11 +36,9 @@ npm run dev
 
 ## Deployment
 
-Build the production bundle from the app directory:
-
 ```bash
 cd Portfolio
 npm run build
 ```
 
-The full application documentation is in `Portfolio/README.md`.
+Detailed application documentation is available in `Portfolio/README.md`.

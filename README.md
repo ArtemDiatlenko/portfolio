@@ -1,31 +1,44 @@
 # Portfolio
 
-Personal portfolio website built with **Next.js**, **TypeScript**, and **Tailwind CSS**.
+Repository for Artem Diatlenko's portfolio website.
 
 ## Overview
 
-This project is a minimalist developer portfolio focused on clean layout, smooth navigation, and clear presentation of content.  
-It currently includes a custom home page, about page, and contact page, along with a shared layout and reusable UI components.
+This project is a frontend portfolio focused on clean presentation, responsive layouts, smooth navigation, and multilingual content.
+
+## Project Layout
+
+- `Portfolio/` - the Vite + React application
 
 ## Pages
 
-- **Home** — landing page with hero section and navigation
-- **About** — short introduction, stack, and background
-- **Contact** — contact links and availability section
+- Home
+- About
+- Skills
+- Projects
+- Contact
 
 ## Tech Stack
 
-- **Next.js**
-- **TypeScript**
-- **Tailwind CSS**
+- React 19
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS 4
 
-## Project Structure
+## Getting Started
 
 ```bash
-src/app
-├── about
-├── contact
-├── components
-├── page.tsx
-├── layout.tsx
-└── globals.css
+cd Portfolio
+npm install
+npm run dev
+```
+
+## Deployment
+
+```bash
+cd Portfolio
+npm run build
+```
+
+Detailed application documentation is available in `Portfolio/README.md`.

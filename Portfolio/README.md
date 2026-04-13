@@ -32,6 +32,21 @@ Open [http://localhost:5173](http://localhost:5173).
 - `npm run preview` - preview production build
 - `npm run lint` - run ESLint
 
+## Deployment
+
+- Default output directory: `dist`
+- Required Node.js version: `20+`
+- SPA fallback is prepared for static hosting:
+  - `npm run build` also creates `dist/404.html` for hosts that use a 404 fallback
+  - `vercel.json` and `netlify.toml` include rewrites to `index.html`
+- If you deploy under a subpath, set `VITE_BASE_PATH` before build
+
+```bash
+VITE_BASE_PATH=/portfolio/ npm run build
+```
+
+The router uses the same base path automatically.
+
 ## Notes
 
 - Project runs as a client-side React SPA.

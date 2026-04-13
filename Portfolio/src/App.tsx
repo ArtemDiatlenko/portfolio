@@ -154,7 +154,7 @@ function AppLayout() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <LanguageProvider>
         <div className="min-h-screen text-slate-900 dark:text-slate-100 flex flex-col">
           <Routes>

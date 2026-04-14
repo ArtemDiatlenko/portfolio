@@ -27,7 +27,7 @@ export const translations = {
     hero: {
       role: "Frontend Developer",
       intro:
-        "Developer based in Warsaw with commercial experience and a strong frontend foundation. I work comfortably on UI, structured interfaces, and the frontend side of web applications, while continuing to grow toward broader product and development work.",
+        "Developer based in Warsaw with commercial experience and a strong frontend base. I work most comfortably on UI, structured interfaces, and product-facing web work, while growing toward broader development.",
       viewProjects: "View Projects",
       viewServices: "View services",
       exploreSkills: "Explore Skills",
@@ -42,37 +42,41 @@ export const translations = {
       exploreQuality: "Explore quality",
       exploreOperations: "Explore operations",
       contactMe: "Contact Me",
-      openToWork: "Open to work",
+      openToWork: "Available",
       basedIn: "Based in",
       city: "Warsaw",
-      availabilityNote: "Open to frontend roles, product work, freelance collaboration, and broader development growth.",
+      availabilityNote: "Open to roles, freelance work, and product collaboration.",
       quickFacts: [
         {
           value: "Frontend",
-          label: "Strongest current base",
+          label: "Strongest base",
         },
         {
-          value: "Commercial",
-          label: "Product development experience",
+          value: "Product",
+          label: "Commercial work",
         },
         {
           value: "Growth",
-          label: "Open to backend and wider development",
+          label: "Backend and beyond",
         },
       ],
       focusLabel: "Focus",
-      focusValue: "Frontend development, UI implementation, broader web development growth",
+      focusValue: "Frontend UI and broader web growth",
       stackLabel: "Stack",
       stackValue: "React, Angular, TypeScript",
-      visualNote: "Strong in frontend today, growing toward broader product and development work.",
+      visualNote: "Strong in frontend today. Growing toward broader product work.",
     },
     home: {
       label: "Overview",
       title: "A strong frontend base with a broader developer direction.",
       intro:
         "My current strength is frontend work, especially UI implementation and structured interfaces, but I want to keep growing into a more complete product and web developer.",
+      aboutCardTitle: "About and direction",
+      aboutCardText: "Background, focus, and approach to product-facing work.",
       skillsCardTitle: "Frontend skills and stack",
-      skillsCardText: "A concise look at the tools, frontend strengths, and working areas I use most.",
+      skillsCardText: "A concise look at the tools and working areas I use most.",
+      contactCardTitle: "Contact and availability",
+      contactCardText: "Reach out about roles, freelance work, or collaboration.",
       journeyCardTitle: "Timeline of milestones",
       journeyCardText: "See how the portfolio evolved from ideas to a coherent premium product system.",
       servicesCardTitle: "Services and delivery modes",
@@ -94,7 +98,7 @@ export const translations = {
       testimonialsCardTitle: "Client feedback",
       testimonialsCardText: "Read practical review points from teams and collaborators.",
       projectsCardTitle: "Selected projects",
-      projectsCardText: "A few practical builds that reflect my frontend direction and current level.",
+      projectsCardText: "A few practical builds that reflect my direction and current level.",
       stackCardTitle: "Deliberate technology stack",
       stackCardText: "See the production stack and engineering habits that keep velocity and reliability in balance.",
       highlights: [
@@ -204,7 +208,7 @@ export const translations = {
       ],
       focusTitle: "Current focus",
       ctaText:
-        "The project pages show how these skills appear in actual interface work and implementation choices.",
+        "Project pages show how these skills appear in real interface work.",
       focusAreas: [
         "Frontend UI Implementation",
         "Component-Based Development",
@@ -741,7 +745,7 @@ export const translations = {
       coreStack: "Core stack",
       background: "Context",
       focusLabel: "Focus",
-      focusValue: "Frontend development, UI implementation, product-facing web interfaces",
+      focusValue: "Frontend development, UI implementation, product-facing interfaces",
       locationLabel: "Location",
       locationValue: "Warsaw, Poland",
       languagesLabel: "Languages",
@@ -785,15 +789,15 @@ export const translations = {
       role: "Role",
       impact: "Impact",
       year: "Year",
-      ctaRepo: "View repository",
-      ctaLive: "Open live site",
+      ctaRepo: "Repository",
+      ctaLive: "Live site",
       items: [
         {
           name: "Diorik / Domparfum",
           description:
             "Commercial e-commerce project for a perfume and cosmetics store, delivered as a live product with catalog-style pages, storefront UX, and production-focused implementation.",
           stack: "Blazor Server, MudBlazor, C#, HTML, CSS",
-          status: "Live / commercial project",
+          status: "Live / commercial",
           role: "Frontend development and partial backend work",
           impact: "Worked on a real business-facing product and gained practical experience shipping and supporting a live commercial website.",
           year: "2023-2024",
@@ -804,7 +808,7 @@ export const translations = {
           description:
             "Angular-based website concept for a construction company, planned as a recruiting and company-presentation project aimed at attracting new workers.",
           stack: "Angular, TypeScript, HTML, CSS, Transloco",
-          status: "Prototype / not deployed",
+          status: "Prototype",
           role: "Frontend implementation and product structure",
           impact: "A practical example of building a business-oriented website around content structure, multilingual setup, and recruitment-focused presentation.",
           year: "2025",
@@ -815,7 +819,7 @@ export const translations = {
           description:
             "My personal portfolio built with React, Vite, and Tailwind, focused on clean structure, reusable sections, and bilingual content.",
           stack: "React, TypeScript, Vite, Tailwind",
-          status: "Live / improving",
+          status: "Live / evolving",
           role: "Frontend implementation, UI structure, content direction",
           impact: "Helps me present my work more clearly and serves as a small product in itself for testing layout, content, and responsive polish.",
           year: "2026",
@@ -1013,7 +1017,7 @@ export const translations = {
     hero: {
       role: "Frontend Developer",
       intro:
-        "Developer z Warszawy z komercyjnym doświadczeniem i mocną bazą frontendową. Najpewniej poruszam się w UI, uporządkowanych interfejsach i frontendowej części aplikacji webowych, a jednocześnie rozwijam się w kierunku szerszej pracy produktowej i developerskiej.",
+        "Developer z Warszawy z komercyjnym doświadczeniem i mocną bazą frontendową. Najpewniej poruszam się w UI, uporządkowanych interfejsach i pracy nad webem po stronie produktu, a jednocześnie rozwijam się szerzej jako developer.",
       viewProjects: "Zobacz projekty",
       viewServices: "Zobacz usługi",
       exploreSkills: "Zobacz umiejętności",
@@ -1028,37 +1032,41 @@ export const translations = {
       exploreQuality: "Sprawdź jakość",
       exploreOperations: "Sprawdź operacje",
       contactMe: "Skontaktuj się",
-      openToWork: "Otwarty na współpracę",
+      openToWork: "Dostępny",
       basedIn: "Mieszkam w",
       city: "Warszawa",
-      availabilityNote: "Otwarty na role frontendowe, pracę produktową, freelance i szerszy rozwój developerski.",
+      availabilityNote: "Otwarty na role, freelance i współpracę produktową.",
       quickFacts: [
         {
           value: "Frontend",
-          label: "Najmocniejsza baza",
+          label: "Najmocniejsza strona",
         },
         {
-          value: "Komercyjne",
-          label: "Doświadczenie produktowe",
+          value: "Komercja",
+          label: "Praca produktowa",
         },
         {
           value: "Rozwój",
-          label: "Otwartość na backend i szerszy development",
+          label: "Backend i rozwój",
         },
       ],
       focusLabel: "Fokus",
-      focusValue: "Frontend development, implementacja UI, rozwój w szerszym web developmencie",
+      focusValue: "Frontend UI i szerszy rozwój webowy",
       stackLabel: "Stack",
       stackValue: "React, Angular, TypeScript",
-      visualNote: "Mocna baza frontendowa dziś, szerszy kierunek produktowy i developerski na kolejne etapy.",
+      visualNote: "Mocna baza frontendowa dziś. Szerszy rozwój developerski dalej.",
     },
     home: {
       label: "Przegląd",
       title: "Mocna baza frontendowa i szerszy kierunek rozwoju jako developer.",
       intro:
         "Dziś moją najmocniejszą stroną jest frontend, szczególnie implementacja UI i uporządkowane interfejsy, ale rozwijam się w stronę pełniejszej pracy nad produktami i aplikacjami webowymi.",
-      skillsCardTitle: "Mapa możliwości",
-      skillsCardText: "Krótki przegląd narzędzi, mocnych stron frontendowych i obszarów, w których pracuję najczęściej.",
+      aboutCardTitle: "O mnie i kierunek",
+      aboutCardText: "Tło, fokus i podejście do pracy po stronie produktu.",
+      skillsCardTitle: "Umiejętności frontendowe i stack",
+      skillsCardText: "Krótki przegląd narzędzi, mocnych stron frontendowych i obszarów, z którymi pracuję najczęściej.",
+      contactCardTitle: "Kontakt i dostępność",
+      contactCardText: "Napisz w sprawie roli, freelance lub współpracy.",
       journeyCardTitle: "Oś czasu",
       journeyCardText: "Zobacz jak portfolio rozwijało się od koncepcji do spójnego, premium systemu.",
       servicesCardTitle: "Usługi i sposób realizacji",
@@ -1079,8 +1087,8 @@ export const translations = {
       studioCardText: "Zobacz, jak organizuję pracę przed, w trakcie i po wdrożeniu.",
       testimonialsCardTitle: "Opinie klientów",
       testimonialsCardText: "Przeczytaj praktyczne uwagi zespołów i partnerów po realizacjach.",
-      projectsCardTitle: "Bieżące projekty",
-      projectsCardText: "Przejrzyj realizacje, które pokazują podejście i skalowalność rozwiązań.",
+      projectsCardTitle: "Wybrane projekty",
+      projectsCardText: "Kilka praktycznych realizacji pokazujących mój kierunek i obecny poziom.",
       stackCardTitle: "Przemyślana technologia",
       stackCardText: "Sprawdź stack i praktyki inżynieryjne, które łączą szybkość z niezawodnością.",
       highlights: [
@@ -1097,7 +1105,7 @@ export const translations = {
         {
           title: "Szerszy kierunek",
           description:
-            "Frontend jest dziś moją najmocniejszą bazą, ale jestem otwarty na backend i większą odpowiedzialność developerską.",
+            "Staram się budować UI, które rozwiązuje realny problem produktowy, a nie tylko dobrze wygląda samo w sobie.",
         },
       ],
       processLabel: "Proces",
@@ -1117,9 +1125,9 @@ export const translations = {
         },
         {
           step: "03",
-          title: "Doprecyzowanie i dowiezienie",
+          title: "Dopracowanie i wdrożenie",
           description:
-            "Dopracowuję detale, sprawdzam accessibility i responsywność, a potem domykam gotowy efekt.",
+            "Dopracowuję detale, sprawdzam dostępność i responsywność, a efekt zostawiam gotowy do realnego użycia.",
         },
       ],
     },
@@ -1172,24 +1180,24 @@ export const translations = {
       categoriesTitle: "Główne obszary",
       categories: [
         {
-          title: "Frontend Stack",
-          items: ["React", "TypeScript", "Tailwind CSS", "Vite", "Architektura CSS", "Storybook"],
-          note: "Design systemy, wielokrotne użycie komponentów i skalowalna dostawa UI.",
+          title: "Stack frontendowy",
+          items: ["React", "Angular", "TypeScript", "JavaScript", "HTML", "CSS"],
+          note: "Główne technologie stojące za interfejsami, które buduję najczęściej.",
         },
         {
-          title: "Inżynieria produktowa",
-          items: ["Architektura", "Modele stanu", "Wydajność", "Strategia testów", "Code Review", "Monitoring jakości"],
-          note: "Zwyczaje inżynierskie nastawione na niezawodność i łatwość utrzymania.",
+          title: "Dostarczanie UI",
+          items: ["Architektura komponentów", "Responsywne układy", "Dostępność", "Zarządzanie stanem", "UI polish", "Code review"],
+          note: "Praktyka frontendowa, na której opieram czytelne, użyteczne i utrzymywalne produkty.",
         },
         {
-          title: "Dostawa i UX",
-          items: ["Przeglądy UI", "Dostępność", "Internacjonalizacja", "Copywriting", "Motion Design", "Systemy responsywności"],
-          note: "Systemy, które utrzymują premium UX na każdym ekranie.",
+          title: "Obszary rozwoju",
+          items: ["Podstawy backendu", "Myślenie produktowe", "Integracja API", "Wydajność", "Testowanie", "Szersze delivery"],
+          note: "Obszary, które chcę rozwijać dalej, przy zachowaniu frontendu jako najmocniejszego kierunku.",
         },
       ],
       focusTitle: "Obecny kierunek",
       ctaText:
-        "Sprawdź strony case studies i projektów, żeby zobaczyć zastosowanie tych kompetencji w praktyce.",
+        "Strony projektów pokazują, jak te umiejętności przekładają się na realną pracę nad interfejsami.",
       focusAreas: [
         "Implementacja UI we frontendzie",
         "Rozwój komponentowy",
@@ -1199,15 +1207,18 @@ export const translations = {
       badgesTitle: "Narzędzia",
       badges: [
         "React",
+        "Angular",
+        "Blazor",
+        "MudBlazor",
         "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
         "Vite",
-        "Tailwind CSS",
         "ESLint",
         "Git",
-        "Figma",
+        "Tailwind CSS",
         "PostCSS",
-        "i18n",
-        "Accessibility",
       ],
     },
     journey: {
@@ -1626,61 +1637,61 @@ export const translations = {
       whoIAmP2:
         "Mam komercyjne doświadczenie w pracy z Blazor, Angular, TypeScript, React, HTML i CSS. Chcę dalej wzmacniać frontend jako swoją główną specjalizację, a jednocześnie zdobywać bardziej praktyczne doświadczenie backendowe i szersze zrozumienie procesu tworzenia aplikacji.",
       coreStack: "Główny stack",
-      background: "Informacje",
-      focusLabel: "Specjalizacja",
-      focusValue: "Frontend development, implementacja UI, interfejsy webowe z podejściem produktowym",
+      background: "Kontekst",
+      focusLabel: "Fokus",
+      focusValue: "Frontend development, implementacja UI, interfejsy po stronie produktu",
       locationLabel: "Lokalizacja",
       locationValue: "Warszawa, Polska",
       languagesLabel: "Języki",
       languagesValue: "Angielski, Polski, Ukraiński, Rosyjski",
       principlesTitle: "Zasady pracy",
       principles: [
-        "Najpierw hierarchia i czytelność, dopiero potem efekty wizualne.",
-        "Każda interakcja powinna być zrozumiała w jednym spojrzeniu.",
-        "Responsywność i accessibility traktuję jako standard jakości.",
-        "Stawiam na systemowe rozwiązania zamiast jednorazowych trików UI.",
+        "Zaczynam od czytelności, a dopiero potem dodaję polish tam, gdzie realnie pomaga.",
+        "Interfejs powinien być łatwy do zeskanowania, użycia i utrzymania.",
+        "Responsywność i dostępność traktuję jako część pracy, a nie dodatkowy etap.",
+        "Wolę wzorce wielokrotnego użytku niż szybkie jednorazowe poprawki.",
       ],
-      timelineTitle: "Ostatni timeline",
+      timelineTitle: "Ostatni kierunek",
       timeline: [
         {
           period: "2026",
-          title: "Launch premium portfolio w React",
+          title: "Przebudowa portfolio",
           description:
-            "Zaprojektowałem i wdrożyłem dwujęzyczne portfolio z reużywalnymi wzorcami glass UI oraz dopracowaniem tras.",
+            "Przebudowałem portfolio wokół czytelniejszego pozycjonowania frontendowego, lepszej struktury i bardziej uczciwej prezentacji mojej pracy.",
         },
         {
           period: "2025",
-          title: "Silny fokus na architekturę komponentów",
+          title: "Pogłębienie frontendu",
           description:
-            "Rozwinąłem praktykę systemów komponentowych TypeScript-first i utrzymywalności frontendu.",
+            "Poświęciłem więcej czasu na reużywalne UI, strukturę komponentów i praktyczną pracę frontendową opartą o TypeScript.",
         },
         {
           period: "2024",
-          title: "Rozwój komercyjnego delivery UI",
+          title: "Komercyjna praca produktowa",
           description:
-            "Dostarczałem praktyczne interfejsy w środowiskach Blazor/Angular z większym naciskiem na rezultat produktowy.",
+            "Pracowałem nad realnymi interfejsami w środowiskach Angular i Blazor oraz zbudowałem mocniejsze nawyki delivery w projektach komercyjnych.",
         },
       ],
     },
     projects: {
       label: "Projekty",
-      title: "Wybrane realizacje i aktualne buildy.",
+      title: "Wybrane realizacje i praktyczne projekty.",
       intro:
-        "Kilka projektów pokazujących mój frontendowy kierunek: portfolio, komercyjne wdrożenie i produktowe koncepty.",
+        "Kilka projektów, które pokazują moją pracę frontendową na styku portfolio, komercyjnego delivery i konceptów produktowych.",
       stack: "Stack",
       status: "Status",
       role: "Rola",
       impact: "Wpływ",
       year: "Rok",
-      ctaRepo: "Zobacz repozytorium",
-      ctaLive: "Otwórz stronę",
+      ctaRepo: "Repozytorium",
+      ctaLive: "Strona live",
       items: [
         {
           name: "Diorik / Domparfum",
           description:
             "Komercyjny projekt e-commerce dla sklepu z perfumami i kosmetykami, wdrożony jako działający produkt z układem katalogowym i praktycznym storefront UX.",
           stack: "Blazor Server, MudBlazor, C#, HTML, CSS",
-          status: "Live / projekt komercyjny",
+          status: "Live / komercyjny",
           role: "Frontend development i częściowo backend",
           impact: "Realna praca przy produkcie biznesowym i praktyczne doświadczenie we wdrażaniu oraz rozwijaniu działającej strony komercyjnej.",
           year: "2023-2024",
@@ -1691,7 +1702,7 @@ export const translations = {
           description:
             "Koncept strony w Angularze dla firmy budowlanej, planowany jako projekt rekrutacyjny i wizerunkowy do pozyskiwania nowych pracowników.",
           stack: "Angular, TypeScript, HTML, CSS, Transloco",
-          status: "Prototyp / bez deployu",
+          status: "Prototyp",
           role: "Implementacja frontendu i struktura produktu",
           impact: "Praktyczny przykład budowy strony biznesowej opartej na strukturze treści, wielojęzyczności i prezentacji ukierunkowanej na rekrutację.",
           year: "2025",
@@ -1712,7 +1723,7 @@ export const translations = {
     },
     contact: {
       label: "Kontakt",
-      title: "Bądźmy w kontakcie.",
+      title: "Porozmawiajmy.",
       intro:
         "Jeśli chcesz porozmawiać o roli, współpracy freelance albo pomyśle na produkt, odezwij się. Najmocniej odnajduję się we frontendzie, ale jestem też otwarty na możliwości, które pozwolą mi rozwijać się szerzej jako developer.",
       availability: "Dostępność",
@@ -1730,22 +1741,22 @@ export const translations = {
         github: "GitHub",
         phone: "Telefon",
       },
-      processTitle: "Przebieg współpracy",
+      processTitle: "Jak zwykle pracuję",
       process: [
         {
-          title: "Ustalenie kontekstu",
+          title: "Podziel się kontekstem",
           description:
-            "Przekazujesz cele projektu, oczekiwania czasowe i aktualne ograniczenia.",
+            "Powiedz, co budujesz, na jakim to jest etapie i jakiego wsparcia potrzebujesz.",
         },
         {
-          title: "Doprecyzowanie zakresu",
+          title: "Ustalmy zakres",
           description:
-            "Proponuję kierunek implementacji, priorytety i realistyczną sekwencję delivery.",
+            "Definiujemy priorytety, odpowiedzialności i realistyczny kolejny krok dla pracy.",
         },
         {
-          title: "Realizacja i polish",
+          title: "Budowanie iteracyjnie",
           description:
-            "Wdrażamy iteracyjnie z regularną kontrolą jakości UI i produkcyjną gotowością.",
+            "Implementuję, dopracowuję i dostosowuję rozwiązanie z uwagą na jakość UI, strukturę i praktyczne dostarczenie.",
         },
       ],
     },
@@ -1755,19 +1766,19 @@ export const translations = {
     meta: {
       home: {
         title: "Artem Diatlenko | Frontend Developer",
-        description: "Portfolio frontend premium z wybranymi projektami i danymi kontaktowymi.",
+        description: "Portfolio frontendowe z wybranymi projektami, stackiem i danymi kontaktowymi.",
       },
       about: {
         title: "O mnie | Artem Diatlenko",
-        description: "Doświadczenie, stack i kontekst pracy frontendowej Artema Diatlenki.",
+        description: "Tło, stack, lokalizacja i frontendowy kierunek pracy Artema Diatlenki.",
       },
       projects: {
         title: "Projekty | Artem Diatlenko",
-        description: "Wybrane realizacje frontendowe, stack i bieżące projekty.",
+        description: "Wybrane projekty frontendowe, praktyczne realizacje i obecny kierunek pracy.",
       },
       skills: {
         title: "Umiejętności | Artem Diatlenko",
-        description: "Szczegółowy przegląd kompetencji, obszarów technologicznych i siły realizacyjnej.",
+        description: "Szczegółowy obraz umiejętności, kierunku technologicznego i mocnych stron w pracy frontendowej.",
       },
       journey: {
         title: "Ścieżka | Artem Diatlenko",
@@ -1811,7 +1822,7 @@ export const translations = {
       },
       contact: {
         title: "Kontakt | Artem Diatlenko",
-        description: "Kanały kontaktowe i dostępność do współpracy.",
+        description: "Kanały kontaktowe, dostępność i szczegóły współpracy.",
       },
       studio: {
         title: "Studio | Artem Diatlenko",

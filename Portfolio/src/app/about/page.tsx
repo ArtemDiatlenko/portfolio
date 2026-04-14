@@ -101,7 +101,7 @@ export default function AboutPage() {
       <ScrollReveal delay={70} mode="up">
         <div className="glass-panel rounded-[2rem] p-7 sm:p-8">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">{t.about.timelineTitle}</h2>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {t.about.timeline.map((item) => (
                 <ScrollReveal key={`${item.period}-${item.title}`} delay={80} mode="zoom">
                   <article

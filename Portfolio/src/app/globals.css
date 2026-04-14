@@ -625,6 +625,7 @@ body::-webkit-scrollbar-thumb {
   line-height: 1.4;
   color: var(--text-low);
   letter-spacing: 0.04em;
+  max-width: 42ch;
   overflow-wrap: anywhere;
 }
 
@@ -647,9 +648,11 @@ body::-webkit-scrollbar-thumb {
 
 .hero-side-kicker {
   font-size: 0.74rem;
+  line-height: 1.5;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-low);
+  max-width: 28ch;
   overflow-wrap: anywhere;
 }
 
@@ -917,7 +920,7 @@ body::-webkit-scrollbar-thumb {
 .explore-card {
   position: relative;
   overflow: hidden;
-  min-height: 15rem;
+  min-height: 16rem;
 }
 
 .explore-card__glow {
@@ -938,6 +941,34 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(130deg, rgba(20, 184, 199, 0.94), rgba(37, 93, 255, 0.96));
   box-shadow: 0 0 14px rgba(37, 93, 255, 0.24);
   transition: transform 320ms var(--ease);
+}
+
+.explore-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.7rem;
+  max-width: 100%;
+  border-radius: 9999px;
+  border: 1px solid rgba(47, 109, 255, 0.14);
+  padding: 0.72rem 1rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(242, 247, 253, 0.76));
+  color: var(--foreground);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.1;
+  box-shadow: 0 10px 26px rgba(12, 28, 54, 0.12);
+  transition:
+    transform 300ms var(--ease),
+    box-shadow 300ms var(--ease),
+    border-color 300ms var(--ease),
+    background-color 300ms var(--ease);
+}
+
+.explore-card:hover .explore-card__cta {
+  transform: translateY(-1px);
+  border-color: rgba(47, 109, 255, 0.26);
+  box-shadow: 0 14px 28px rgba(12, 28, 54, 0.18);
 }
 
 .explore-card:hover .explore-card__glow {
@@ -983,7 +1014,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 0.9rem;
   line-height: 1.1;
   text-align: center;
-  white-space: normal;
+  white-space: nowrap;
   cursor: pointer;
   transition:
     transform 280ms var(--ease),
@@ -1026,6 +1057,12 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid var(--border-soft);
   background: rgba(249, 252, 255, 0.9);
   color: var(--foreground);
+  box-shadow: 0 10px 24px rgba(12, 28, 54, 0.1);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(47, 109, 255, 0.18);
+  box-shadow: 0 14px 28px rgba(12, 28, 54, 0.16);
 }
 
 .project-link-btn {
@@ -1217,6 +1254,18 @@ body::-webkit-scrollbar-thumb {
 
   .nav-item:not(.nav-item-active):hover {
     background: rgba(18, 29, 48, 0.82);
+  }
+
+  .explore-card__cta {
+    background: linear-gradient(160deg, rgba(16, 25, 42, 0.96), rgba(12, 20, 35, 0.84));
+    color: var(--foreground);
+    border-color: rgba(222, 233, 255, 0.14);
+    box-shadow: 0 10px 26px rgba(2, 7, 18, 0.28);
+  }
+
+  .explore-card:hover .explore-card__cta {
+    border-color: rgba(117, 168, 255, 0.28);
+    box-shadow: 0 14px 30px rgba(2, 7, 18, 0.36);
   }
 }
 

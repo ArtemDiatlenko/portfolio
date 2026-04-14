@@ -65,7 +65,7 @@ export default function HeroContent() {
           <span className="hero-side-kicker">{t.hero.visualNote}</span>
         </div>
 
-        <div className="animate-enter animate-delay-3 grid gap-3 sm:grid-cols-3">
+        <div className="animate-enter animate-delay-3 grid gap-3 md:grid-cols-3">
           {t.hero.quickFacts.map((item) => (
             <div
               key={item.label}

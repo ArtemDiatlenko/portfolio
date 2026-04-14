@@ -11,8 +11,8 @@ export default function Home() {
     {
       to: "/about",
       section: t.nav.about,
-      title: t.about.title,
-      text: t.about.intro,
+      title: t.home.aboutCardTitle,
+      text: t.home.aboutCardText,
       cta: t.hero.exploreSkills,
       mode: "left" as const,
     },
@@ -35,8 +35,8 @@ export default function Home() {
     {
       to: "/contact",
       section: t.nav.contact,
-      title: t.contact.title,
-      text: t.contact.intro,
+      title: t.home.contactCardTitle,
+      text: t.home.contactCardText,
       cta: t.hero.contactMe,
       mode: "up" as const,
     },
@@ -67,7 +67,7 @@ export default function Home() {
             {t.home.intro}
           </p>
 
-          <div className="mt-7 grid gap-4 sm:grid-cols-3">
+          <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {t.home.highlights.map((item) => (
               <article key={item.title} className="highlight-tile glass-card glass-card--interactive rounded-[1.6rem] p-5">
                 <h3 className="text-base font-semibold text-slate-900 dark:text-white">{item.title}</h3>
@@ -121,7 +121,10 @@ export default function Home() {
               <p className="relative z-10 mt-3 text-xl font-semibold text-slate-900 dark:text-white">{card.title}</p>
               <p className="relative z-10 mt-3 max-w-xl text-sm leading-7 text-slate-700 dark:text-slate-200/80">{card.text}</p>
               <div className="relative z-10 mt-6 flex items-center justify-between gap-4">
-                <p className="text-sm font-medium text-slate-900 transition-transform duration-300 group-hover:translate-x-1 dark:text-white">→ {card.cta}</p>
+                <span className="explore-card__cta">
+                  <span aria-hidden>→</span>
+                  <span>{card.cta}</span>
+                </span>
                 <span className="explore-card__dot" />
               </div>
             </Link>

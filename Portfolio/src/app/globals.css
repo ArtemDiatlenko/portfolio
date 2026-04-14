@@ -401,6 +401,10 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
+.site-header-shell {
+  overflow: visible;
+}
+
 .site-header-shell::after,
 .site-footer-shell::after {
   content: "";
@@ -487,6 +491,9 @@ body::-webkit-scrollbar-thumb {
   line-height: 1.08;
   letter-spacing: -0.02em;
   font-weight: 700;
+  max-width: 16ch;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .section-intro {
@@ -495,6 +502,8 @@ body::-webkit-scrollbar-thumb {
   color: var(--text-muted);
   line-height: 1.8;
   font-size: 1rem;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
 }
 
 .page-head {
@@ -530,6 +539,8 @@ body::-webkit-scrollbar-thumb {
   line-height: 0.94;
   letter-spacing: -0.045em;
   font-weight: 700;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .hero-inline-note {
@@ -537,11 +548,13 @@ body::-webkit-scrollbar-thumb {
   line-height: 1.4;
   color: var(--text-low);
   letter-spacing: 0.04em;
+  overflow-wrap: anywhere;
 }
 
 .hero-capability-pill {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   min-height: 2.3rem;
   border-radius: 9999px;
   border: 1px solid rgba(47, 109, 255, 0.14);
@@ -551,6 +564,8 @@ body::-webkit-scrollbar-thumb {
   font-size: 0.74rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
+  text-align: center;
 }
 
 .hero-side-kicker {
@@ -558,6 +573,7 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-low);
+  overflow-wrap: anywhere;
 }
 
 .hero-status-pill {
@@ -937,12 +953,15 @@ body::-webkit-scrollbar-thumb {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
   border-radius: 9999px;
   padding: 0.38rem 0.92rem;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.11em;
   text-transform: uppercase;
+  text-align: center;
+  overflow-wrap: anywhere;
   transition:
     color 220ms var(--ease),
     background-color 220ms var(--ease),
@@ -1120,6 +1139,8 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   cursor: pointer;
   list-style: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   transition: border-color 220ms var(--ease), background-color 220ms var(--ease);
 }
 
@@ -1136,6 +1157,7 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   top: calc(100% + 0.65rem);
   width: 240px;
+  z-index: 70;
   border-radius: 1.1rem;
   border: 1px solid var(--border-soft);
   background: var(--surface-muted);
@@ -1146,6 +1168,10 @@ body::-webkit-scrollbar-thumb {
   transform: scale(0.99) translateY(-8px);
   pointer-events: none;
   transition: opacity 220ms var(--ease), transform 220ms var(--ease);
+}
+
+details[open] {
+  z-index: 80;
 }
 
 details[open] > .menu-panel {
@@ -1161,6 +1187,7 @@ details[open] > .menu-panel {
   color: var(--text-muted);
   font-size: 0.84rem;
   font-weight: 500;
+  overflow-wrap: anywhere;
 }
 
 .menu-link-active,
@@ -1359,12 +1386,28 @@ details[open] > .menu-panel {
 }
 
 @media (max-width: 768px) {
+  .main-stage,
+  .route-shell {
+    transform: none;
+  }
+
+  .route-shell {
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .site-header-shell {
+    padding-inline: 0.85rem;
+  }
+
   .menu-panel {
-    width: 215px;
+    width: min(18rem, calc(100vw - 2.5rem));
+    max-height: min(60vh, 28rem);
+    overflow-y: auto;
   }
 
   .scroll-indicator {
-    right: 0.75rem;
+    display: none;
   }
 
   .scroll-indicator__track {
@@ -1385,9 +1428,74 @@ details[open] > .menu-panel {
     font-size: clamp(3rem, 16vw, 4.7rem);
   }
 
+  .hero-shell {
+    min-height: auto;
+  }
+
+  .hero-visual-frame {
+    min-height: 14rem;
+  }
+
   .hero-inline-note,
   .hero-side-kicker {
     width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-stage,
+  .route-shell {
+    transform: none;
+  }
+
+  .route-shell {
+    overflow: visible;
+    min-height: auto;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .section-title {
+    max-width: 14ch;
+  }
+
+  .hero-visual-frame {
+    min-height: 15rem;
+  }
+
+  .site-footer-shell {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header-shell {
+    border-radius: 1.4rem;
+    padding-block: 0.7rem;
+  }
+
+  .hero-display {
+    font-size: clamp(2.55rem, 14vw, 3.45rem);
+    line-height: 0.98;
+  }
+
+  .hero-capability-pill {
+    min-height: 2rem;
+    padding: 0.45rem 0.72rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 9vw, 2.35rem);
+    max-width: 12ch;
+  }
+
+  .section-intro {
+    font-size: 0.96rem;
+    line-height: 1.7;
   }
 }
 

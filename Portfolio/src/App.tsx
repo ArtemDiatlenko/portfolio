@@ -20,26 +20,29 @@ import LanguageSwitch from "./app/components/LanguageSwitch";
 import SiteFooter from "./app/components/SiteFooter";
 import ScrollToTopOnRouteChange from "./app/components/ScrollToTopOnRouteChange";
 import { LanguageProvider } from "./app/components/LanguageProvider";
+import { routeMetaByPath, siteLinks, type SiteRouteKey } from "./app/site";
 import { useLanguage } from "./app/components/useLanguage";
 
-type RouteMetaKey =
-  | "home"
-  | "about"
-  | "skills"
-  | "projects"
-  | "contact";
 type NavItem = {
   to: string;
   label: string;
 };
-
-const routeMetaByPath: Record<string, RouteMetaKey> = {
-  "/": "home",
-  "/about": "about",
-  "/skills": "skills",
-  "/projects": "projects",
-  "/contact": "contact",
+type AppRoute = {
+  element: JSX.Element;
+  key: SiteRouteKey;
+  to: string;
 };
+
+const appRoutes: AppRoute[] = [
+  { key: "home", to: "/", element: <Home /> },
+  { key: "about", to: "/about", element: <AboutPage /> },
+  { key: "skills", to: "/skills", element: <SkillsPage /> },
+  { key: "projects", to: "/projects", element: <ProjectsPage /> },
+  { key: "contact", to: "/contact", element: <ContactPage /> },
+];
+
+const inactiveNavItemClass =
+  "text-slate-600 hover:bg-white/65 hover:text-slate-900 dark:text-slate-200/75 dark:hover:bg-slate-800/60 dark:hover:text-white";
 
 function RouteMeta() {
   const { pathname } = useLocation();
@@ -61,13 +64,10 @@ function RouteMeta() {
 
 function SiteHeader() {
   const { t } = useLanguage();
-  const navItems: NavItem[] = [
-    { to: "/", label: t.nav.home },
-    { to: "/about", label: t.nav.about },
-    { to: "/skills", label: t.nav.skills },
-    { to: "/projects", label: t.nav.projects },
-    { to: "/contact", label: t.nav.contact },
-  ];
+  const navItems: NavItem[] = siteLinks.map((link) => ({
+    to: link.to,
+    label: t.nav[link.key],
+  }));
 
   return (
     <header className="sticky top-0 z-40 px-4 pt-4 sm:px-6">
@@ -83,9 +83,7 @@ function SiteHeader() {
                 to={item.to}
                 viewTransition
                 end={item.to === "/"}
-                className={({ isActive }) =>
-                  `nav-item ${isActive ? "nav-item-active" : "text-slate-600 hover:bg-white/65 hover:text-slate-900 dark:text-slate-200/75 dark:hover:bg-slate-800/60 dark:hover:text-white"}`
-                }
+                className={({ isActive }) => `nav-item ${isActive ? "nav-item-active" : inactiveNavItemClass}`}
               >
                 {item.label}
               </NavLink>
@@ -159,11 +157,9 @@ export default function App() {
         <div className="min-h-screen text-slate-900 dark:text-slate-100 flex flex-col">
           <Routes>
             <Route element={<AppLayout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/skills" element={<SkillsPage />} />
-              <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/contact" element={<ContactPage />} />
+              {appRoutes.map((route) => (
+                <Route key={route.key} path={route.to} element={route.element} />
+              ))}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
           </Routes>

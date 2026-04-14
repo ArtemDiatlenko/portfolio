@@ -1,5 +1,47 @@
+import PageIntro from "../components/PageIntro";
 import { useLanguage } from "../components/useLanguage";
 import ScrollReveal from "../components/ScrollReveal";
+
+type ProjectLinksProps = {
+  liveHref?: string;
+  repoHref?: string;
+  liveLabel: string;
+  repoLabel: string;
+  compact?: boolean;
+};
+
+function ProjectLinks({ liveHref, repoHref, liveLabel, repoLabel, compact = false }: ProjectLinksProps) {
+  const baseClass = compact
+    ? "btn-label inline-flex min-h-10 items-center justify-center px-4 py-2 text-sm"
+    : "btn-label inline-flex min-h-11 items-center justify-center px-5 py-3 text-sm";
+  const liveClass = compact ? "btn btn-primary project-link-btn project-link-btn--compact" : "btn btn-primary project-link-btn";
+  const repoClass = compact ? "btn btn-primary project-link-btn project-link-btn--compact" : "btn btn-primary project-link-btn";
+
+  return (
+    <div className="flex flex-wrap gap-3">
+      {liveHref ? (
+        <a
+          href={liveHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${liveClass} ${baseClass}`}
+        >
+          {liveLabel}
+        </a>
+      ) : null}
+      {repoHref ? (
+        <a
+          href={repoHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${repoClass} ${baseClass}`}
+        >
+          {repoLabel}
+        </a>
+      ) : null}
+    </div>
+  );
+}
 
 export default function ProjectsPage() {
   const { t } = useLanguage();
@@ -8,15 +50,7 @@ export default function ProjectsPage() {
   return (
     <section className="space-y-10 sm:space-y-12">
       <ScrollReveal className="page-head">
-        <div className="space-y-4">
-          <p className="section-kicker">{t.projects.label}</p>
-          <h1 className="section-title">
-            {t.projects.title}
-          </h1>
-          <p className="section-intro">
-            {t.projects.intro}
-          </p>
-        </div>
+        <PageIntro label={t.projects.label} title={t.projects.title} intro={t.projects.intro} />
       </ScrollReveal>
 
       <ScrollReveal mode="soft">
@@ -56,14 +90,12 @@ export default function ProjectsPage() {
                 </p>
                 <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-200/80">{featuredProject.impact}</p>
               </div>
-              <a
-                href={featuredProject.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary btn-label inline-flex items-center justify-center px-5 py-3 text-sm"
-              >
-                {t.projects.cta}
-              </a>
+              <ProjectLinks
+                liveHref={featuredProject.liveHref}
+                repoHref={featuredProject.repoHref}
+                liveLabel={t.projects.ctaLive}
+                repoLabel={t.projects.ctaRepo}
+              />
             </div>
           </div>
         </article>
@@ -107,14 +139,15 @@ export default function ProjectsPage() {
                 </p>
               </div>
 
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary btn-label mt-7 inline-flex items-center px-4 py-2 text-sm"
-              >
-                {t.projects.cta}
-              </a>
+              <div className="mt-7">
+                <ProjectLinks
+                  compact
+                  liveHref={project.liveHref}
+                  repoHref={project.repoHref}
+                  liveLabel={t.projects.ctaLive}
+                  repoLabel={t.projects.ctaRepo}
+                />
+              </div>
             </article>
           </ScrollReveal>
         ))}

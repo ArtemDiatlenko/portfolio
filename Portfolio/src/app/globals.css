@@ -508,9 +508,10 @@ body::-webkit-scrollbar-thumb {
 
 .page-head {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 2rem;
-  padding: 1rem 0 0.4rem;
+  padding: 1rem 0.35rem 0.4rem;
+  min-width: 0;
 }
 
 .page-head::after {
@@ -736,6 +737,7 @@ body::-webkit-scrollbar-thumb {
   opacity: 0;
   transform: translateY(24px);
   filter: blur(7px);
+  min-width: 0;
   transition:
     opacity 560ms var(--ease),
     transform 560ms var(--ease),
@@ -941,6 +943,14 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid var(--border-soft);
   background: rgba(249, 252, 255, 0.9);
   color: var(--foreground);
+}
+
+.project-link-btn {
+  min-width: 12.5rem;
+}
+
+.project-link-btn--compact {
+  min-width: 0;
 }
 
 .btn-ghost {
@@ -1457,8 +1467,17 @@ details[open] > .menu-panel {
     display: none;
   }
 
+  .page-head {
+    padding-inline: 0.75rem;
+  }
+
   .section-title {
+    font-size: clamp(2.1rem, 5.4vw, 3rem);
     max-width: 14ch;
+  }
+
+  .section-intro {
+    max-width: 42ch;
   }
 
   .hero-visual-frame {
@@ -1471,6 +1490,10 @@ details[open] > .menu-panel {
 }
 
 @media (max-width: 480px) {
+  .page-head {
+    padding-inline: 0.5rem;
+  }
+
   .site-header-shell {
     border-radius: 1.4rem;
     padding-block: 0.7rem;
@@ -1494,6 +1517,7 @@ details[open] > .menu-panel {
   }
 
   .section-intro {
+    max-width: 100%;
     font-size: 0.96rem;
     line-height: 1.7;
   }

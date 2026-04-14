@@ -1,3 +1,4 @@
+import PageIntro from "../components/PageIntro";
 import { useLanguage } from "../components/useLanguage";
 import ScrollReveal from "../components/ScrollReveal";
 
@@ -51,11 +52,7 @@ export default function ContactPage() {
   return (
     <section className="space-y-10 sm:space-y-12">
       <ScrollReveal className="page-head">
-        <p className="section-kicker">{t.contact.label}</p>
-        <h1 className="section-title">
-          {t.contact.title}
-        </h1>
-        <p className="section-intro">{t.contact.intro}</p>
+        <PageIntro label={t.contact.label} title={t.contact.title} intro={t.contact.intro} />
       </ScrollReveal>
 
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">

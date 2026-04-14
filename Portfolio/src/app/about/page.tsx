@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import PageIntro from "../components/PageIntro";
 import { useLanguage } from "../components/useLanguage";
 import ScrollReveal from "../components/ScrollReveal";
 
@@ -38,11 +39,7 @@ export default function AboutPage() {
   return (
     <section className="space-y-10 sm:space-y-12">
       <ScrollReveal className="page-head">
-        <p className="section-kicker">{t.about.label}</p>
-        <h1 className="section-title">
-          {t.about.title}
-        </h1>
-        <p className="section-intro">{t.about.intro}</p>
+        <PageIntro label={t.about.label} title={t.about.title} intro={t.about.intro} />
       </ScrollReveal>
 
       <div className="grid gap-6 lg:grid-cols-[1.12fr_0.88fr]">

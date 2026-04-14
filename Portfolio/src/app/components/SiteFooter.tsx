@@ -1,15 +1,29 @@
 import { Link } from "react-router-dom";
+import { footerLinks } from "../site";
 import { useLanguage } from "./useLanguage";
+
+type SocialLinkProps = {
+  ariaLabel: string;
+  children: React.ReactNode;
+  href: string;
+};
+
+function SocialLink({ ariaLabel, children, href }: SocialLinkProps) {
+  return (
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+      aria-label={ariaLabel}
+      className="social-icon-link"
+    >
+      {children}
+    </a>
+  );
+}
 
 export default function SiteFooter() {
   const { t } = useLanguage();
-  const shortcutLinks = [
-    { to: "/about", label: t.nav.about },
-    { to: "/skills", label: t.nav.skills },
-    { to: "/projects", label: t.nav.projects },
-    { to: "/contact", label: t.nav.contact },
-  ];
-
   return (
     <footer className="relative z-0 mt-8 px-4 pb-5 sm:mt-10 sm:px-6 sm:pb-7 lg:mt-12">
       <div className="site-footer-shell glass-card relative mx-auto flex w-full max-w-6xl flex-col gap-4 rounded-3xl px-6 py-5 text-sm md:flex-row md:flex-wrap md:items-center md:justify-between">
@@ -23,24 +37,20 @@ export default function SiteFooter() {
         </p>
 
         <nav className="relative z-10 flex flex-wrap gap-2 text-sm md:max-w-[28rem]">
-          {shortcutLinks.map((item) => (
+          {footerLinks.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               viewTransition
               className="nav-item"
             >
-              {item.label}
+              {t.nav[item.key]}
             </Link>
           ))}
         </nav>
 
         <div className="relative z-10 flex flex-wrap items-center gap-3">
-          <a
-            href="mailto:adyatlenko5@gmail.com"
-            aria-label="Email"
-            className="social-icon-link"
-          >
+          <SocialLink href="mailto:adyatlenko5@gmail.com" ariaLabel="Email">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -52,14 +62,11 @@ export default function SiteFooter() {
               <path d="M4 6h16v12H4z" />
               <path d="m4 7 8 6 8-6" />
             </svg>
-          </a>
+          </SocialLink>
 
-          <a
+          <SocialLink
             href="https://www.linkedin.com/in/artem-diatlenko"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="social-icon-link"
+            ariaLabel="LinkedIn"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,14 +76,11 @@ export default function SiteFooter() {
             >
               <path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.4a1.56 1.56 0 0 1 0 3.1ZM5.6 9.76h2.68V18H5.6V9.76Zm4.36 0h2.57v1.13h.04c.36-.68 1.23-1.4 2.54-1.4 2.72 0 3.22 1.79 3.22 4.12V18h-2.68v-3.88c0-.93-.02-2.12-1.29-2.12-1.3 0-1.5 1.01-1.5 2.05V18H9.96V9.76Z" />
             </svg>
-          </a>
+          </SocialLink>
 
-          <a
+          <SocialLink
             href="https://github.com/ArtemDiatlenko"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="social-icon-link"
+            ariaLabel="GitHub"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +90,7 @@ export default function SiteFooter() {
             >
               <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.36 1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.03 10.03 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z" />
             </svg>
-          </a>
+          </SocialLink>
         </div>
       </div>
     </footer>

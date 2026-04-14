@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PageIntro from "../components/PageIntro";
 import { useLanguage } from "../components/useLanguage";
 import ScrollReveal from "../components/ScrollReveal";
 
@@ -8,13 +9,7 @@ export default function SkillsPage() {
   return (
     <section className="space-y-10 sm:space-y-12">
       <ScrollReveal className="page-head">
-        <div className="space-y-4">
-          <p className="section-kicker">{t.skills.label}</p>
-          <h1 className="section-title">
-            {t.skills.title}
-          </h1>
-          <p className="section-intro">{t.skills.intro}</p>
-        </div>
+        <PageIntro label={t.skills.label} title={t.skills.title} intro={t.skills.intro} />
       </ScrollReveal>
 
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">

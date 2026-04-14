@@ -42,8 +42,8 @@ export default function AboutPage() {
         <PageIntro label={t.about.label} title={t.about.title} intro={t.about.intro} />
       </ScrollReveal>
 
-      <div className="grid gap-6 lg:grid-cols-[1.12fr_0.88fr]">
-        <div className="glass-panel rounded-[2rem] p-7 sm:sticky sm:top-28 sm:p-8">
+      <div className="grid gap-6 xl:grid-cols-[1.12fr_0.88fr]">
+        <div className="glass-panel rounded-[2rem] p-7 sm:p-8 xl:sticky xl:top-28">
           <ScrollReveal>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">{t.about.whoIAm}</h2>
           </ScrollReveal>
@@ -55,7 +55,7 @@ export default function AboutPage() {
           </ScrollReveal>
         </div>
 
-        <div className="space-y-6">
+        <div className="min-w-0 space-y-6">
           <ScrollReveal mode="left">
             <SectionCard title={t.about.coreStack}>
               <div className="flex flex-wrap gap-3">

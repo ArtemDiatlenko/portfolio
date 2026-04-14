@@ -55,7 +55,7 @@ export default function ProjectsPage() {
 
       <ScrollReveal mode="soft">
         <article className="project-card project-card--featured glass-panel glass-card--interactive rounded-[2rem] p-7 sm:p-8">
-          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="grid gap-8 xl:grid-cols-[1.1fr_0.9fr]">
             <div>
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300/70">
                 {t.projects.year} {featuredProject.year}
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="grid min-w-0 gap-4 sm:grid-cols-2 xl:grid-cols-1">
               <div className="glass-card rounded-[1.5rem] p-5">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300/70">
                   {t.projects.role}

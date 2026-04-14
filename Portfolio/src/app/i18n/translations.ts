@@ -27,7 +27,7 @@ export const translations = {
     hero: {
       role: "Frontend Developer",
       intro:
-        "Frontend-focused developer with commercial experience building clear, responsive interfaces. I work mainly with React, Angular, Blazor, TypeScript, JavaScript, HTML, and CSS.",
+        "Developer based in Warsaw with commercial experience and a strong frontend foundation. I work comfortably on UI, structured interfaces, and the frontend side of web applications, while continuing to grow toward broader product and development work.",
       viewProjects: "View Projects",
       viewServices: "View services",
       exploreSkills: "Explore Skills",
@@ -45,32 +45,32 @@ export const translations = {
       openToWork: "Open to work",
       basedIn: "Based in",
       city: "Warsaw",
-      availabilityNote: "Open to frontend roles, freelance work, and product collaboration.",
+      availabilityNote: "Open to frontend roles, product work, freelance collaboration, and broader development growth.",
       quickFacts: [
         {
           value: "Frontend",
-          label: "Main focus",
+          label: "Strongest current base",
         },
         {
           value: "Commercial",
-          label: "Development experience",
+          label: "Product development experience",
         },
         {
-          value: "Open",
-          label: "Roles, freelance, collaboration",
+          value: "Growth",
+          label: "Open to backend and wider development",
         },
       ],
       focusLabel: "Focus",
-      focusValue: "Frontend development and product UI",
+      focusValue: "Frontend development, UI implementation, broader web development growth",
       stackLabel: "Stack",
       stackValue: "React, Angular, TypeScript",
-      visualNote: "Frontend-first, product-minded, and open to growing across the stack.",
+      visualNote: "Strong in frontend today, growing toward broader product and development work.",
     },
     home: {
       label: "Overview",
-      title: "Frontend work built around clarity, structure, and practical UI.",
+      title: "A strong frontend base with a broader developer direction.",
       intro:
-        "I focus on interfaces that are easy to use, easy to maintain, and solid in real product work.",
+        "My current strength is frontend work, especially UI implementation and structured interfaces, but I want to keep growing into a more complete product and web developer.",
       skillsCardTitle: "Frontend skills and stack",
       skillsCardText: "A concise look at the tools, frontend strengths, and working areas I use most.",
       journeyCardTitle: "Timeline of milestones",
@@ -181,9 +181,9 @@ export const translations = {
   },
     skills: {
       label: "Skills",
-      title: "Frontend strengths and working stack.",
+      title: "Strong frontend base and broader development direction.",
       intro:
-        "The tools and areas I use most in real work, with frontend clearly at the center.",
+        "The tools and areas I work with most often, with frontend as my strongest current base.",
       categoriesTitle: "Core areas",
       categories: [
         {
@@ -202,15 +202,14 @@ export const translations = {
           note: "Areas I want to deepen while keeping frontend as my strongest direction.",
         },
       ],
-      metricsLabel: "Strength",
-      proficiencyTitle: "Current emphasis",
+      focusTitle: "Current focus",
       ctaText:
         "The project pages show how these skills appear in actual interface work and implementation choices.",
-      levels: [
-        { label: "Frontend UI Implementation", value: 88 },
-        { label: "Component-Based Development", value: 84 },
-        { label: "TypeScript in Frontend Work", value: 80 },
-        { label: "Accessibility and Responsiveness", value: 78 },
+      focusAreas: [
+        "Frontend UI Implementation",
+        "Component-Based Development",
+        "Responsive and Accessible Interfaces",
+        "Broader Web Development Growth",
       ],
       badgesTitle: "Tooling",
       badges: [
@@ -731,18 +730,18 @@ export const translations = {
     },
     about: {
       label: "About",
-      title: "Frontend-focused, product-aware, and still growing.",
+      title: "Strong frontend base. Broader developer direction.",
       intro:
-        "I’m Artem Diatlenko, a developer based in Warsaw with a clear focus on frontend work and practical product development.",
+        "I’m Artem Diatlenko, a developer based in Warsaw. My strongest current background is in frontend, and I’m developing toward more complete product and web application work.",
       whoIAm: "Who I am",
       whoIAmP1:
-        "I work mainly on frontend. My strongest area is building interfaces that feel clear, responsive, and well structured.",
+        "I work mainly on frontend and on implementing interfaces that are clear, responsive, and well structured. I’m strongest on the UI and product-facing side of web applications, where structure, usability, and execution quality matter.",
       whoIAmP2:
-        "I have commercial development experience with Angular, React, Blazor and MudBlazor, TypeScript, JavaScript, HTML, and CSS. I also have broader full-stack exposure, but frontend is where I bring the most value today.",
+        "I have commercial experience with Blazor, Angular, TypeScript, React, HTML, and CSS. I want to keep building stronger frontend depth, while also gaining more practical backend experience and a broader understanding of how applications are built end to end.",
       coreStack: "Core stack",
       background: "Context",
       focusLabel: "Focus",
-      focusValue: "Frontend development, UI implementation, product-facing work",
+      focusValue: "Frontend development, UI implementation, product-facing web interfaces",
       locationLabel: "Location",
       locationValue: "Warsaw, Poland",
       languagesLabel: "Languages",
@@ -828,12 +827,12 @@ export const translations = {
       label: "Contact",
       title: "Let’s talk.",
       intro:
-        "If you have a role, freelance project, or product idea to discuss, you can reach me through the channels below.",
+        "If you have a role, freelance project, or product idea to discuss, feel free to reach out. I’m strongest in frontend work, but I’m also open to opportunities that help me grow more broadly as a developer.",
       availability: "Availability",
       availabilityP1:
-        "I’m open to frontend roles, freelance work, and product collaboration. My strongest value is in frontend implementation, UI quality, and practical product work.",
+        "I’m open to frontend roles, freelance work, and product collaboration. My strongest value today is in UI implementation, frontend development, and structured interface work.",
       availabilityP2:
-        "I also want to grow into broader product development and backend work over time, but frontend remains my main direction.",
+        "At the same time, I’m interested in growing into broader development work and gaining stronger backend experience through real projects and teams.",
       responseLabel: "Typical response",
       responseValue: "Within 24 hours",
       timezoneLabel: "Timezone",
@@ -1014,7 +1013,7 @@ export const translations = {
     hero: {
       role: "Frontend Developer",
       intro:
-        "Tworzę nowoczesne interfejsy frontendowe, stawiając na czytelność, użyteczność i responsywność. Pracuję z Blazor, Angular i TypeScript, a obecnie rozwijam portfolio oraz doświadczenie komercyjne.",
+        "Developer z Warszawy z komercyjnym doświadczeniem i mocną bazą frontendową. Najpewniej poruszam się w UI, uporządkowanych interfejsach i frontendowej części aplikacji webowych, a jednocześnie rozwijam się w kierunku szerszej pracy produktowej i developerskiej.",
       viewProjects: "Zobacz projekty",
       viewServices: "Zobacz usługi",
       exploreSkills: "Zobacz umiejętności",
@@ -1032,34 +1031,34 @@ export const translations = {
       openToWork: "Otwarty na współpracę",
       basedIn: "Mieszkam w",
       city: "Warszawa",
-      availabilityNote: "Otwarty na role frontendowe skoncentrowane na produkcie i jakości wykonania.",
+      availabilityNote: "Otwarty na role frontendowe, pracę produktową, freelance i szerszy rozwój developerski.",
       quickFacts: [
         {
-          value: "3+",
-          label: "Lat budowania systemów UI",
+          value: "Frontend",
+          label: "Najmocniejsza baza",
         },
         {
-          value: "24",
-          label: "Dostarczone interfejsy",
+          value: "Komercyjne",
+          label: "Doświadczenie produktowe",
         },
         {
-          value: "95+",
-          label: "Typowy wynik Lighthouse",
+          value: "Rozwój",
+          label: "Otwartość na backend i szerszy development",
         },
       ],
-      focusLabel: "Specjalizacja",
-      focusValue: "Design systemy i produktowe UI",
+      focusLabel: "Fokus",
+      focusValue: "Frontend development, implementacja UI, rozwój w szerszym web developmencie",
       stackLabel: "Stack",
-      stackValue: "React, TypeScript, Tailwind",
-      visualNote: "Dostarczam dopracowane interfejsy z realnym wpływem produktowym.",
+      stackValue: "React, Angular, TypeScript",
+      visualNote: "Mocna baza frontendowa dziś, szerszy kierunek produktowy i developerski na kolejne etapy.",
     },
     home: {
-      label: "Najważniejsze",
-      title: "Projektowane premium, wdrażane produkcyjnie.",
+      label: "Przegląd",
+      title: "Mocna baza frontendowa i szerszy kierunek rozwoju jako developer.",
       intro:
-        "Moje podejście frontendowe łączy precyzję wizualną, skalowalną architekturę i pragmatyczne dowożenie produktu.",
+        "Dziś moją najmocniejszą stroną jest frontend, szczególnie implementacja UI i uporządkowane interfejsy, ale rozwijam się w stronę pełniejszej pracy nad produktami i aplikacjami webowymi.",
       skillsCardTitle: "Mapa możliwości",
-      skillsCardText: "Poznaj kompetencje frontendowe i standardy pracy, które stosuję na co dzień.",
+      skillsCardText: "Krótki przegląd narzędzi, mocnych stron frontendowych i obszarów, w których pracuję najczęściej.",
       journeyCardTitle: "Oś czasu",
       journeyCardText: "Zobacz jak portfolio rozwijało się od koncepcji do spójnego, premium systemu.",
       servicesCardTitle: "Usługi i sposób realizacji",
@@ -1086,41 +1085,41 @@ export const translations = {
       stackCardText: "Sprawdź stack i praktyki inżynieryjne, które łączą szybkość z niezawodnością.",
       highlights: [
         {
-          title: "Myślenie produktowe",
+          title: "Czytelne UI",
           description:
-            "Każda sekcja i interakcja są projektowane pod klarowną wartość biznesową, nie tylko pod wygląd.",
+            "Najpierw dbam o układ, hierarchię i jasność interakcji, dopiero potem o dodatkowy polish.",
         },
         {
-          title: "Rygor inżynieryjny",
+          title: "Solidny frontend",
           description:
-            "Reużywalne komponenty, ścisły TypeScript i spójne wzorce UI, które utrzymują tempo przy rosnącym zakresie.",
+            "Znaczenie mają dla mnie reużywalne komponenty, przewidywalna struktura i praktyczne podejście do TypeScriptu.",
         },
         {
-          title: "Szybkie delivery",
+          title: "Szerszy kierunek",
           description:
-            "Szybkie iteracje z czystą implementacją: od kierunku koncepcyjnego do produkcyjnego polishu.",
+            "Frontend jest dziś moją najmocniejszą bazą, ale jestem otwarty na backend i większą odpowiedzialność developerską.",
         },
       ],
       processLabel: "Proces",
-      processTitle: "Jak zamieniam pomysły w dopracowane interfejsy.",
+      processTitle: "Jak zwykle pracuję.",
       processSteps: [
         {
           step: "01",
-          title: "Discovery i kierunek",
+          title: "Zrozumienie kontekstu",
           description:
-            "Definiuję ograniczenia, oczekiwane rezultaty użytkownika i ton wizualny przed detalami implementacji.",
+            "Zaczynam od celu, ograniczeń i tego, w czym interfejs ma realnie pomóc użytkownikowi.",
         },
         {
           step: "02",
-          title: "Implementacja systemowa",
+          title: "Budowanie ze strukturą",
           description:
-            "Buduję stabilną strukturę komponentów z tokenami, responsywnością i spójnymi stanami.",
+            "Wdrażam UI z reużywalnymi komponentami, jasnymi stanami i responsywnością od samego początku.",
         },
         {
           step: "03",
-          title: "Polish i delivery",
+          title: "Doprecyzowanie i dowiezienie",
           description:
-            "Finalizuję motion, accessibility i performance, aby efekt był premium na realnych urządzeniach.",
+            "Dopracowuję detale, sprawdzam accessibility i responsywność, a potem domykam gotowy efekt.",
         },
       ],
     },
@@ -1167,9 +1166,9 @@ export const translations = {
     },
     skills: {
       label: "Umiejętności",
-      title: "Wysokowydajne kompetencje frontendowe.",
+      title: "Mocna baza frontendowa i dalszy rozwój.",
       intro:
-        "Praktyczny zestaw umiejętności wykorzystywanych na produkcyjnych projektach: od systemów tokenów i animacji po dostępność, architekturę i dyscyplinę wdrożeń.",
+        "Obszary i narzędzia, z którymi pracuję najczęściej, z frontendem jako najmocniejszą obecną stroną.",
       categoriesTitle: "Główne obszary",
       categories: [
         {
@@ -1188,15 +1187,14 @@ export const translations = {
           note: "Systemy, które utrzymują premium UX na każdym ekranie.",
         },
       ],
-      metricsLabel: "Poziom",
-      proficiencyTitle: "Poziom zaawansowania",
+      focusTitle: "Obecny kierunek",
       ctaText:
         "Sprawdź strony case studies i projektów, żeby zobaczyć zastosowanie tych kompetencji w praktyce.",
-      levels: [
-        { label: "Systemy Design System", value: 95 },
-        { label: "Wydajność UI i optymalizacja", value: 90 },
-        { label: "Dostępność", value: 92 },
-        { label: "TypeScript", value: 89 },
+      focusAreas: [
+        "Implementacja UI we frontendzie",
+        "Rozwój komponentowy",
+        "Responsywne i dostępne interfejsy",
+        "Szerszy rozwój w web developmencie",
       ],
       badgesTitle: "Narzędzia",
       badges: [
@@ -1619,18 +1617,18 @@ export const translations = {
     },
     about: {
       label: "O mnie",
-      title: "Kilka słów więcej o mnie.",
+      title: "Mocna baza frontendowa. Szerszy kierunek rozwoju.",
       intro:
-        "Jestem Artem Diatlenko, developerem frontendowym zainteresowanym czystymi interfejsami, praktycznym UI i nowoczesnymi aplikacjami webowymi.",
+        "Jestem Artem Diatlenko, developerem z Warszawy. Moją najmocniejszą obecną stroną jest frontend, a dalej rozwijam się w kierunku pełniejszej pracy nad produktami i aplikacjami webowymi.",
       whoIAm: "Kim jestem",
       whoIAmP1:
-        "Skupiam się głównie na frontendzie i lubię zamieniać pomysły w interfejsy, które są czytelne, responsywne i wizualnie zbalansowane.",
+        "Skupiam się głównie na frontendzie i na implementacji interfejsów, które są czytelne, responsywne i dobrze uporządkowane. Najmocniej odnajduję się po stronie UI i tej części aplikacji webowych, w której liczy się struktura, użyteczność i jakość wykonania.",
       whoIAmP2:
-        "Mój obecny stack to głównie Blazor, Angular i TypeScript. Równolegle rozwijam portfolio i profil zawodowy wokół web developmentu.",
+        "Mam komercyjne doświadczenie w pracy z Blazor, Angular, TypeScript, React, HTML i CSS. Chcę dalej wzmacniać frontend jako swoją główną specjalizację, a jednocześnie zdobywać bardziej praktyczne doświadczenie backendowe i szersze zrozumienie procesu tworzenia aplikacji.",
       coreStack: "Główny stack",
       background: "Informacje",
       focusLabel: "Specjalizacja",
-      focusValue: "Frontend development, implementacja UI",
+      focusValue: "Frontend development, implementacja UI, interfejsy webowe z podejściem produktowym",
       locationLabel: "Lokalizacja",
       locationValue: "Warszawa, Polska",
       languagesLabel: "Języki",
@@ -1716,12 +1714,12 @@ export const translations = {
       label: "Kontakt",
       title: "Bądźmy w kontakcie.",
       intro:
-        "Jeśli chcesz porozmawiać o projekcie, współpracy lub ofercie, możesz skontaktować się ze mną przez poniższe kanały.",
+        "Jeśli chcesz porozmawiać o roli, współpracy freelance albo pomyśle na produkt, odezwij się. Najmocniej odnajduję się we frontendzie, ale jestem też otwarty na możliwości, które pozwolą mi rozwijać się szerzej jako developer.",
       availability: "Dostępność",
       availabilityP1:
-        "Jestem otwarty na oferty frontendowe, współpracę i pracę produktową, gdzie liczy się klarowność, struktura i mocne UI.",
+        "Jestem otwarty na role frontendowe, współpracę freelance i pracę produktową. Dziś największą wartość wnoszę w obszarze implementacji UI, frontendu i uporządkowanych interfejsów.",
       availabilityP2:
-        "Najlepiej kontaktować się mailowo, przez LinkedIn albo telefonicznie.",
+        "Jednocześnie chcę rozwijać się szerzej jako developer i zdobywać mocniejsze doświadczenie backendowe w realnych projektach i zespołach.",
       responseLabel: "Typowa odpowiedź",
       responseValue: "Do 24 godzin",
       timezoneLabel: "Strefa czasowa",

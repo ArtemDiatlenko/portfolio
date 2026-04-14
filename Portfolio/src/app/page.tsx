@@ -50,7 +50,7 @@ export default function Home() {
         <HeroVisual />
       </section>
 
-      <section className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+      <section className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
         <div className="glass-panel animate-enter rounded-[2rem] p-7 sm:p-9">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <p className="section-kicker">{t.home.label}</p>
@@ -79,7 +79,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="glass-card animate-enter animate-delay-1 rounded-[2rem] p-7 sm:sticky sm:top-28 sm:p-8">
+        <div className="glass-card animate-enter animate-delay-1 rounded-[2rem] p-7 sm:p-8 xl:sticky xl:top-28">
           <p className="section-kicker">{t.home.processLabel}</p>
           <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
             {t.home.processTitle}

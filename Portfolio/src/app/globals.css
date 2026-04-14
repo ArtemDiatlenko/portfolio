@@ -506,6 +506,82 @@ body::-webkit-scrollbar-thumb {
   text-wrap: pretty;
 }
 
+.route-layer,
+.route-layer > *,
+.page-head,
+.hero-shell,
+.glass-panel,
+.glass-card,
+.process-step,
+.timeline-card,
+.project-card,
+.contact-channel,
+.highlight-tile,
+.explore-card,
+.premium-stat {
+  min-width: 0;
+}
+
+.route-layer :where(.grid, .flex) > * {
+  min-width: 0;
+}
+
+:where(
+  .page-head,
+  .hero-shell,
+  .glass-panel,
+  .glass-card,
+  .process-step,
+  .timeline-card,
+  .project-card,
+  .contact-channel,
+  .highlight-tile,
+  .explore-card,
+  .premium-stat
+) :is(h1, h2, h3, h4, p, span, a, li) {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+:where(
+  .page-head,
+  .hero-shell,
+  .glass-panel,
+  .glass-card,
+  .process-step,
+  .timeline-card,
+  .project-card,
+  .contact-channel,
+  .highlight-tile,
+  .explore-card,
+  .premium-stat
+) :is(h1, h2, h3, h4) {
+  text-wrap: balance;
+}
+
+:where(
+  .page-head,
+  .hero-shell,
+  .glass-panel,
+  .glass-card,
+  .process-step,
+  .timeline-card,
+  .project-card,
+  .contact-channel,
+  .highlight-tile,
+  .explore-card,
+  .premium-stat
+) :is(p, span, a, li) {
+  text-wrap: pretty;
+}
+
+.section-block-heading {
+  margin-inline: auto;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
 .page-head {
   position: relative;
   overflow: visible;
@@ -528,9 +604,9 @@ body::-webkit-scrollbar-thumb {
   inset: auto -8% -28% auto;
   width: 44%;
   height: 58%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent 66%);
-  filter: blur(20px);
-  opacity: 0.78;
+  background: radial-gradient(circle, rgba(37, 93, 255, 0.14), rgba(20, 184, 199, 0.08) 38%, transparent 68%);
+  filter: blur(26px);
+  opacity: 0.48;
   pointer-events: none;
 }
 
@@ -778,10 +854,14 @@ body::-webkit-scrollbar-thumb {
 .skill-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  max-width: 100%;
   border-radius: 9999px;
   border: 1px solid var(--border-soft);
   background: linear-gradient(125deg, rgba(255, 255, 255, 0.95), rgba(242, 246, 251, 0.84));
   color: var(--text-muted);
+  text-align: center;
+  white-space: normal;
   transition: transform 240ms var(--ease), box-shadow 240ms var(--ease), border-color 240ms var(--ease);
 }
 
@@ -897,10 +977,13 @@ body::-webkit-scrollbar-thumb {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
   border-radius: 9999px;
   border: 1px solid transparent;
   font-size: 0.9rem;
   line-height: 1.1;
+  text-align: center;
+  white-space: normal;
   cursor: pointer;
   transition:
     transform 280ms var(--ease),
@@ -947,6 +1030,7 @@ body::-webkit-scrollbar-thumb {
 
 .project-link-btn {
   min-width: 12.5rem;
+  max-width: 100%;
 }
 
 .project-link-btn--compact {

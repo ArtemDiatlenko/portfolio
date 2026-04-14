@@ -12,9 +12,11 @@ export default function SkillsPage() {
         <PageIntro label={t.skills.label} title={t.skills.title} intro={t.skills.intro} />
       </ScrollReveal>
 
-      <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-        <ScrollReveal className="grid gap-6 lg:grid-cols-1">
-          <h2 className="text-xl font-semibold text-slate-900 dark:text-white">{t.skills.categoriesTitle}</h2>
+      <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+        <ScrollReveal className="grid min-w-0 gap-6">
+          <h2 className="section-block-heading px-2 text-center text-xl font-semibold text-slate-900 dark:text-white xl:px-0 xl:text-left">
+            {t.skills.categoriesTitle}
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {t.skills.categories.map((category, index) => (
               <article
@@ -42,27 +44,22 @@ export default function SkillsPage() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={80} className="space-y-6">
+        <ScrollReveal delay={80} className="min-w-0 space-y-6">
           <div className="glass-card glass-card--interactive rounded-[1.8rem] p-6">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300/70">
-              {t.skills.proficiencyTitle}
+              {t.skills.focusTitle}
             </p>
-            <div className="mt-5 space-y-4">
-              {t.skills.levels.map((level) => (
-                <div key={level.label} className="space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <p className="font-medium text-slate-800 dark:text-slate-100">{level.label}</p>
-                    <span className="text-xs text-slate-500 dark:text-slate-300/75">{level.value}%</span>
-                  </div>
-                  <div className="h-2 overflow-hidden rounded-full bg-slate-200/60 dark:bg-slate-700/55">
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-1000 ease-[cubic-bezier(0.2,0.8,0.2,1)]"
-                      style={{ width: `${level.value}%` }}
-                    />
-                  </div>
-                </div>
+            <ul className="mt-5 space-y-3">
+              {t.skills.focusAreas.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-3 rounded-2xl border border-slate-200/70 bg-white/45 px-4 py-3 text-sm font-medium text-slate-800 dark:border-slate-200/10 dark:bg-slate-900/30 dark:text-slate-100"
+                >
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
+                  <span>{item}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <div className="glass-card glass-card--interactive rounded-[1.8rem] p-6">

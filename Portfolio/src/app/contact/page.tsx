@@ -55,8 +55,8 @@ export default function ContactPage() {
         <PageIntro label={t.contact.label} title={t.contact.title} intro={t.contact.intro} />
       </ScrollReveal>
 
-      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <ScrollReveal mode="left" className="space-y-4 sm:sticky sm:top-28 sm:self-start">
+      <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
+        <ScrollReveal mode="left" className="space-y-4 xl:sticky xl:top-28 xl:self-start">
           <div className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="glass-card glass-card--interactive rounded-[1.5rem] p-5">
@@ -86,7 +86,7 @@ export default function ContactPage() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal mode="right">
+        <ScrollReveal mode="right" className="min-w-0">
           <div className="glass-panel glass-card--interactive rounded-[2rem] p-7 sm:p-8">
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">{t.contact.availability}</h2>
             <div className="mt-5 space-y-5 leading-8 text-slate-700 dark:text-slate-200/80">

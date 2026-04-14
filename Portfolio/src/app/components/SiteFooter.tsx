@@ -11,8 +11,8 @@ export default function SiteFooter() {
   ];
 
   return (
-    <footer className="px-4 pb-5 sm:px-6 sm:pb-7">
-      <div className="site-footer-shell glass-card glass-card--interactive relative mx-auto flex w-full max-w-6xl flex-col gap-4 rounded-3xl px-6 py-5 text-sm md:flex-row md:items-center md:justify-between">
+    <footer className="relative z-0 mt-8 px-4 pb-5 sm:mt-10 sm:px-6 sm:pb-7 lg:mt-12">
+      <div className="site-footer-shell glass-card relative mx-auto flex w-full max-w-6xl flex-col gap-4 rounded-3xl px-6 py-5 text-sm md:flex-row md:flex-wrap md:items-center md:justify-between">
         <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-px w-44 -translate-x-1/2 -translate-y-1/2 items-center gap-4 text-slate-400 dark:text-slate-300/70 md:flex">
           <span className="h-px w-14 bg-slate-300/70 dark:bg-slate-200/20" />
           <span className="text-sm tracking-[0.18em]">◇</span>
@@ -22,7 +22,7 @@ export default function SiteFooter() {
           {t.footer.rights}
         </p>
 
-        <nav className="relative z-10 flex flex-wrap gap-2 text-sm">
+        <nav className="relative z-10 flex flex-wrap gap-2 text-sm md:max-w-[28rem]">
           {shortcutLinks.map((item) => (
             <Link
               key={item.to}
@@ -35,7 +35,7 @@ export default function SiteFooter() {
           ))}
         </nav>
 
-        <div className="relative z-10 flex items-center gap-3">
+        <div className="relative z-10 flex flex-wrap items-center gap-3">
           <a
             href="mailto:adyatlenko5@gmail.com"
             aria-label="Email"

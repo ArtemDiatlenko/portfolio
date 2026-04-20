@@ -10,6 +10,11 @@ type ProjectLinksProps = {
   compact?: boolean;
 };
 
+function getProjectLink(project: Record<string, unknown>, key: "liveHref" | "repoHref") {
+  const value = project[key];
+  return typeof value === "string" ? value : undefined;
+}
+
 function ProjectLinks({ liveHref, repoHref, liveLabel, repoLabel, compact = false }: ProjectLinksProps) {
   const baseClass = compact
     ? "btn-label inline-flex min-h-10 items-center justify-center px-4 py-2 text-sm"
@@ -91,8 +96,8 @@ export default function ProjectsPage() {
                 <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-200/80">{featuredProject.impact}</p>
               </div>
               <ProjectLinks
-                liveHref={featuredProject.liveHref}
-                repoHref={featuredProject.repoHref}
+                liveHref={getProjectLink(featuredProject, "liveHref")}
+                repoHref={getProjectLink(featuredProject, "repoHref")}
                 liveLabel={t.projects.ctaLive}
                 repoLabel={t.projects.ctaRepo}
               />
@@ -142,8 +147,8 @@ export default function ProjectsPage() {
               <div className="mt-7">
                 <ProjectLinks
                   compact
-                  liveHref={project.liveHref}
-                  repoHref={project.repoHref}
+                  liveHref={getProjectLink(project, "liveHref")}
+                  repoHref={getProjectLink(project, "repoHref")}
                   liveLabel={t.projects.ctaLive}
                   repoLabel={t.projects.ctaRepo}
                 />

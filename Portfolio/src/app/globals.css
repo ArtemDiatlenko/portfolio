@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -361,6 +360,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: var(--radius-3xl);
   background: linear-gradient(180deg, var(--surface-elevated), rgba(239, 245, 252, 0.86));
   box-shadow: var(--shadow-soft);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
   backdrop-filter: blur(18px) saturate(140%);
 }
 
@@ -369,6 +369,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: var(--radius-2xl);
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(241, 246, 252, 0.82));
   box-shadow: var(--shadow-card);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
   backdrop-filter: blur(14px) saturate(140%);
 }
 
@@ -493,7 +494,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   max-width: 16ch;
   text-wrap: balance;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .section-intro {
@@ -502,7 +503,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--text-muted);
   line-height: 1.8;
   font-size: 1rem;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   text-wrap: pretty;
 }
 
@@ -540,7 +541,9 @@ body::-webkit-scrollbar-thumb {
   .premium-stat
 ) :is(h1, h2, h3, h4, p, span, a, li) {
   max-width: 100%;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: manual;
 }
 
 :where(
@@ -578,7 +581,7 @@ body::-webkit-scrollbar-thumb {
 .section-block-heading {
   margin-inline: auto;
   max-width: 100%;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   text-wrap: balance;
 }
 
@@ -617,7 +620,7 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: -0.045em;
   font-weight: 700;
   text-wrap: balance;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .hero-inline-note {
@@ -626,7 +629,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--text-low);
   letter-spacing: 0.04em;
   max-width: 42ch;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .hero-capability-pill {
@@ -642,7 +645,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 0.74rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   text-align: center;
 }
 
@@ -653,7 +656,26 @@ body::-webkit-scrollbar-thumb {
   text-transform: uppercase;
   color: var(--text-low);
   max-width: 28ch;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+}
+
+.hero-visual-meta-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.hero-visual-meta-label {
+  min-width: 0;
+  text-wrap: balance;
+}
+
+.hero-visual-meta-value {
+  justify-self: end;
+  text-align: right;
+  white-space: nowrap;
+  overflow-wrap: normal;
 }
 
 .hero-status-pill {
@@ -668,6 +690,7 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--text-muted);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
 
@@ -762,8 +785,7 @@ body::-webkit-scrollbar-thumb {
   min-height: 50vh;
   transition:
     transform 420ms var(--ease),
-    opacity 420ms var(--ease),
-    filter 420ms var(--ease);
+    opacity 420ms var(--ease);
   transform:
     translate3d(0, calc(var(--scroll-progress) * -3px), 0)
     rotateX(calc(var(--scroll-progress) * 0.8deg));
@@ -802,9 +824,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .route-shell--exit {
-  opacity: 0.14;
-  filter: blur(10px);
-  transform: translateY(18px) scale(0.985);
+  opacity: 0.18;
+  transform: translateY(18px) scale(0.988);
 }
 
 .route-layer {
@@ -815,12 +836,10 @@ body::-webkit-scrollbar-thumb {
 .scroll-reveal {
   opacity: 0;
   transform: translateY(24px);
-  filter: blur(7px);
   min-width: 0;
   transition:
     opacity 560ms var(--ease),
-    transform 560ms var(--ease),
-    filter 560ms var(--ease);
+    transform 560ms var(--ease);
 }
 
 .scroll-reveal--zoom {
@@ -837,7 +856,6 @@ body::-webkit-scrollbar-thumb {
 
 .scroll-reveal--fade {
   transform: translateY(16px);
-  filter: blur(14px);
 }
 
 .scroll-reveal--tilt {
@@ -851,7 +869,6 @@ body::-webkit-scrollbar-thumb {
 .scroll-reveal.is-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
-  filter: blur(0);
 }
 
 .skill-badge {
@@ -1092,7 +1109,7 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.11em;
   text-transform: uppercase;
   text-align: center;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   transition:
     color 220ms var(--ease),
     background-color 220ms var(--ease),
@@ -1131,6 +1148,7 @@ body::-webkit-scrollbar-thumb {
   background: var(--surface-muted);
   padding: 5px;
   gap: 2px;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-card);
 }
@@ -1306,6 +1324,7 @@ body::-webkit-scrollbar-thumb {
   background: var(--surface-muted);
   box-shadow: var(--shadow-lift);
   padding: 0.55rem;
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   opacity: 0;
   transform: scale(0.99) translateY(-8px);
@@ -1330,7 +1349,7 @@ details[open] > .menu-panel {
   color: var(--text-muted);
   font-size: 0.84rem;
   font-weight: 500;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .menu-link-active,
@@ -1448,12 +1467,10 @@ details[open] > .menu-panel {
   from {
     opacity: 0;
     transform: translateY(14px);
-    filter: blur(5px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-    filter: blur(0);
   }
 }
 
@@ -1486,12 +1503,10 @@ details[open] > .menu-panel {
   from {
     opacity: 1;
     transform: translateY(0) scale(1);
-    filter: blur(0);
   }
   to {
     opacity: 0;
     transform: translateY(14px) scale(0.992);
-    filter: blur(8px);
   }
 }
 
@@ -1499,12 +1514,10 @@ details[open] > .menu-panel {
   from {
     opacity: 0;
     transform: translateY(14px) scale(1.008);
-    filter: blur(10px);
   }
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
-    filter: blur(0);
   }
 }
 
@@ -1583,6 +1596,20 @@ details[open] > .menu-panel {
   .hero-side-kicker {
     width: 100%;
   }
+
+  .scroll-reveal {
+    transition-duration: 320ms;
+    transform: translateY(12px);
+  }
+
+  .scroll-reveal--left,
+  .scroll-reveal--right,
+  .scroll-reveal--tilt,
+  .scroll-reveal--zoom,
+  .scroll-reveal--soft,
+  .scroll-reveal--fade {
+    transform: translateY(12px);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1620,6 +1647,60 @@ details[open] > .menu-panel {
   .site-footer-shell {
     gap: 1rem;
   }
+
+  body::before,
+  .site-header-shell::after,
+  .site-footer-shell::after,
+  .route-shell::after,
+  .hero-shell::after,
+  .ambient-grid,
+  .ambient-gradient--halo,
+  .ambient-beam,
+  .ambient-noise {
+    display: none;
+  }
+
+  .ambient-gradient--aurora {
+    filter: none;
+    opacity: 0.58;
+    transform: none;
+  }
+
+  .ambient-orb {
+    animation: none;
+    opacity: 0.36;
+  }
+
+  .ambient-orb--three,
+  .ambient-orb--four {
+    display: none;
+  }
+
+  .glass-panel,
+  .glass-card,
+  .lang-switch,
+  .menu-panel,
+  .hero-status-pill {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .glass-card--interactive:hover,
+  .glass-card--interactive:focus-within,
+  .btn:hover,
+  .explore-card:hover .explore-card__cta,
+  .explore-card:hover .explore-card__glow,
+  .explore-card:hover .explore-card__dot,
+  .skill-badge:hover,
+  .social-icon-link:hover {
+    transform: none;
+    box-shadow: var(--shadow-card);
+  }
+
+  .route-shell--exit {
+    opacity: 0.48;
+    transform: translateY(10px);
+  }
 }
 
 @media (max-width: 480px) {
@@ -1654,6 +1735,16 @@ details[open] > .menu-panel {
     font-size: 0.96rem;
     line-height: 1.7;
   }
+
+  .hero-visual-meta-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .hero-visual-meta-value {
+    justify-self: start;
+    text-align: left;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1678,7 +1769,6 @@ details[open] > .menu-panel {
     animation: none;
     opacity: 1;
     transform: none;
-    filter: none;
   }
 
   .premium-stat::before,

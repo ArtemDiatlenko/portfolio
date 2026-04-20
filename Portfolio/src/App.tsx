@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { type ReactElement, useEffect, useState } from "react";
 import {
   BrowserRouter,
   Link,
@@ -28,7 +28,7 @@ type NavItem = {
   label: string;
 };
 type AppRoute = {
-  element: JSX.Element;
+  element: ReactElement;
   key: SiteRouteKey;
   to: string;
 };

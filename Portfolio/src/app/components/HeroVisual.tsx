@@ -41,11 +41,16 @@ export default function HeroVisual() {
 
             <div className="mt-5 space-y-2">
               {statPreview.map((item) => (
-                <div key={item.label} className="flex items-center justify-between border-t border-slate-200/60 pt-2 dark:border-slate-200/10">
-                  <span className="text-[0.63rem] uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300/70">
+                <div
+                  key={item.label}
+                  className="hero-visual-meta-row border-t border-slate-200/60 pt-2 dark:border-slate-200/10"
+                >
+                  <span className="hero-visual-meta-label text-[0.63rem] uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300/70">
                     {item.label}
                   </span>
-                  <span className="text-sm font-semibold text-slate-900 dark:text-white">{item.value}</span>
+                  <span className="hero-visual-meta-value text-sm font-semibold text-slate-900 dark:text-white">
+                    {item.value}
+                  </span>
                 </div>
               ))}
             </div>

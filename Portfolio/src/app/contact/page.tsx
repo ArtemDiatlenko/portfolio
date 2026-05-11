@@ -44,6 +44,16 @@ export default function ContactPage() {
       href: profileContacts.github,
     },
     {
+      label: t.contact.channels.portfolio,
+      value: profileContacts.portfolioLabel,
+      href: profileContacts.portfolio,
+    },
+    {
+      label: t.contact.channels.location,
+      value: profileContacts.location,
+      href: profileContacts.locationHref,
+    },
+    {
       label: t.contact.channels.phone,
       value: profileContacts.phone,
       href: profileContacts.phoneHref,

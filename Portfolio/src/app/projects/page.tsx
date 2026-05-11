@@ -10,6 +10,12 @@ type ProjectLinksProps = {
   compact?: boolean;
 };
 
+type ProjectScreenshot = {
+  src: string;
+  alt: string;
+  label: string;
+};
+
 function getProjectLink(project: Record<string, unknown>, key: "liveHref" | "repoHref") {
   const value = project[key];
   return typeof value === "string" ? value : undefined;
@@ -17,6 +23,43 @@ function getProjectLink(project: Record<string, unknown>, key: "liveHref" | "rep
 
 function getProjectStack(stack: string) {
   return stack.split(",").map((item) => item.trim()).filter(Boolean);
+}
+
+function getProjectHighlights(project: Record<string, unknown>) {
+  const value = project.highlights;
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value.filter((item): item is string => typeof item === "string");
+}
+
+function getProjectText(project: Record<string, unknown>, key: "note") {
+  const value = project[key];
+  return typeof value === "string" ? value : undefined;
+}
+
+function getProjectScreenshots(project: Record<string, unknown>): ProjectScreenshot[] {
+  const value = project.screenshots;
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value.flatMap((item) => {
+    if (!item || typeof item !== "object") {
+      return [];
+    }
+
+    const src = typeof item.src === "string" ? item.src : undefined;
+    const alt = typeof item.alt === "string" ? item.alt : undefined;
+    const label = typeof item.label === "string" ? item.label : undefined;
+
+    if (!src || !alt || !label) {
+      return [];
+    }
+
+    return [{ src, alt, label }];
+  });
 }
 
 function ProjectLinks({ liveHref, repoHref, liveLabel, repoLabel, compact = false }: ProjectLinksProps) {
@@ -56,6 +99,7 @@ export default function ProjectsPage() {
   const { t } = useLanguage();
   const featuredProject = t.projects.items[0];
   const otherProjects = t.projects.items.slice(1);
+  const featuredScreenshots = featuredProject ? getProjectScreenshots(featuredProject) : [];
 
   return (
     <section className="space-y-10 sm:space-y-12">
@@ -86,6 +130,28 @@ export default function ProjectsPage() {
                     </span>
                   ))}
                 </div>
+
+                <div className="mt-6">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300/70">
+                    {t.projects.highlights}
+                  </p>
+                  <ul className="mt-3 space-y-3">
+                    {getProjectHighlights(featuredProject).map((item) => (
+                      <li
+                        key={item}
+                        className="process-step rounded-xl px-4 py-3 text-sm leading-7 text-slate-700 glass-card--interactive dark:text-slate-200/80"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {getProjectText(featuredProject, "note") ? (
+                  <p className="mt-5 rounded-[1.2rem] border border-slate-300/65 bg-white/50 px-4 py-3 text-sm leading-7 text-slate-700 dark:border-slate-200/20 dark:bg-slate-900/40 dark:text-slate-200/80">
+                    {getProjectText(featuredProject, "note")}
+                  </p>
+                ) : null}
               </div>
 
               <div className="grid min-w-0 gap-4 sm:grid-cols-2 xl:grid-cols-1">
@@ -94,6 +160,12 @@ export default function ProjectsPage() {
                     {t.projects.role}
                   </p>
                   <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-200/80">{featuredProject.role}</p>
+                </div>
+                <div className="glass-card rounded-[1.5rem] p-5">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300/70">
+                    {t.projects.status}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-200/80">{featuredProject.status}</p>
                 </div>
                 <div className="glass-card rounded-[1.5rem] p-5">
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300/70">
@@ -109,11 +181,43 @@ export default function ProjectsPage() {
                 />
               </div>
             </div>
+
+            {featuredScreenshots.length > 0 ? (
+              <div className="mt-8 border-t border-slate-300/65 pt-8 dark:border-slate-200/20">
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300/70">
+                  {t.projects.galleryTitle}
+                </p>
+
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  {featuredScreenshots.map((screenshot, index) => (
+                    <a
+                      key={screenshot.src}
+                      href={screenshot.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group overflow-hidden rounded-[1.5rem] border border-slate-300/65 bg-white/55 transition duration-300 hover:-translate-y-0.5 dark:border-slate-200/20 dark:bg-slate-900/45"
+                    >
+                      <div className="aspect-[16/10] overflow-hidden">
+                        <img
+                          src={screenshot.src}
+                          alt={screenshot.alt}
+                          loading={index === 0 ? "eager" : "lazy"}
+                          className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+                        />
+                      </div>
+                      <div className="px-4 py-3">
+                        <p className="text-sm font-medium text-slate-800 dark:text-slate-100">{screenshot.label}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : null}
           </article>
         </ScrollReveal>
       ) : null}
 
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {otherProjects.map((project, index) => (
           <ScrollReveal key={project.name} mode={index % 2 === 0 ? "left" : "right"} delay={index * 80}>
             <article className="project-card glass-card glass-card--interactive rounded-[1.8rem] p-7">
@@ -140,6 +244,22 @@ export default function ProjectsPage() {
                 ))}
               </div>
 
+              <div className="mt-5">
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300/70">
+                  {t.projects.highlights}
+                </p>
+                <ul className="mt-3 space-y-3">
+                  {getProjectHighlights(project).map((item) => (
+                    <li
+                      key={item}
+                      className="process-step rounded-xl px-4 py-3 text-sm leading-7 text-slate-700 glass-card--interactive dark:text-slate-200/80"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               <div className="mt-6 space-y-3 text-sm text-slate-700 dark:text-slate-200/90">
                 <p>
                   <span className="text-slate-500 dark:text-slate-300/70">{t.projects.role}: </span>
@@ -150,6 +270,12 @@ export default function ProjectsPage() {
                   {project.impact}
                 </p>
               </div>
+
+              {getProjectText(project, "note") ? (
+                <p className="mt-5 rounded-[1.2rem] border border-slate-300/65 bg-white/50 px-4 py-3 text-sm leading-7 text-slate-700 dark:border-slate-200/20 dark:bg-slate-900/40 dark:text-slate-200/80">
+                  {getProjectText(project, "note")}
+                </p>
+              ) : null}
 
               <div className="mt-7">
                 <ProjectLinks

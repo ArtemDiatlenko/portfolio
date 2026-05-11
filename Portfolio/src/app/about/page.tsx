@@ -97,6 +97,35 @@ export default function AboutPage() {
         </div>
       </div>
 
+      <ScrollReveal delay={60} mode="up">
+        <div className="glass-panel rounded-[2rem] p-7 sm:p-8">
+          <p className="section-kicker">{t.about.experienceLabel}</p>
+          <h2 className="mt-4 text-2xl font-semibold text-slate-900 dark:text-white">
+            {t.about.experienceTitle}
+          </h2>
+
+          <div className="mt-6 grid gap-6 xl:grid-cols-[0.88fr_1.12fr]">
+            <div className="space-y-4">
+              <MetaItem label={t.about.experienceRoleLabel} value={t.about.experience.role} />
+              <MetaItem label={t.about.experienceCompanyLabel} value={t.about.experience.company} />
+              <MetaItem label={t.about.experiencePeriodLabel} value={t.about.experience.period} />
+              <MetaItem label={t.about.experienceLocationLabel} value={t.about.experience.location} />
+            </div>
+
+            <ul className="space-y-3">
+              {t.about.experience.bullets.map((item) => (
+                <li
+                  key={item}
+                  className="process-step rounded-xl px-4 py-3 text-sm leading-7 text-slate-700 glass-card--interactive dark:text-slate-200/80"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </ScrollReveal>
+
       <ScrollReveal delay={70} mode="up">
         <div className="glass-panel rounded-[2rem] p-7 sm:p-8">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">{t.about.timelineTitle}</h2>

@@ -12,605 +12,728 @@ type TranslationShape<T> =
         : T;
 
 const enTranslations = {
-    nav: {
-      home: "Home",
-      about: "About",
-      skills: "Skills",
-      projects: "Projects",
-      contact: "Contact",
-      menu: "Open navigation menu",
-      languageSwitch: "Language switch",
-    },
-    hero: {
-      role: "Frontend Developer",
-      intro:
-        "Warsaw-based frontend developer with commercial experience across product interfaces, responsive UI, and implementation work. I care about clarity, structure, and screens that feel ready for real use.",
-      viewProjects: "View Projects",
-      exploreSkills: "Explore Skills",
-      contactMe: "Contact Me",
-      openToWork: "Available",
-      basedIn: "Based in",
-      city: "Warsaw",
-      availabilityNote: "Open to product teams, freelance work, and practical frontend tasks.",
-      quickFacts: [
-        {
-          value: "UI",
-          label: "Core work",
-        },
-        {
-          value: "Delivery",
-          label: "Commercial practice",
-        },
-        {
-          value: "Growth",
-          label: "Broader scope",
-        },
+  nav: {
+    home: "Home",
+    about: "About",
+    skills: "Skills",
+    projects: "Projects",
+    contact: "Contact",
+    menu: "Open navigation menu",
+    languageSwitch: "Language switch",
+  },
+  hero: {
+    role: "Junior Web Developer",
+    intro:
+      "Junior web developer based in Warsaw with commercial experience on a client e-commerce web application. I work with Angular, TypeScript, JavaScript, C#, Blazor, HTML/CSS, SQL, and Git, and I want to keep growing in a professional development team.",
+    viewProjects: "View Projects",
+    exploreSkills: "Explore Skills",
+    contactMe: "Contact Me",
+    openToWork: "Available",
+    basedIn: "Based in",
+    city: "Warsaw",
+    availabilityNote: "Open to junior web roles, freelance tasks, and team-based product work.",
+    quickFacts: [
+      {
+        value: "E-commerce",
+        label: "Commercial project",
+      },
+      {
+        value: "Angular",
+        label: "Current focus",
+      },
+      {
+        value: "C# / Blazor",
+        label: "Product background",
+      },
+    ],
+    focusLabel: "Direction",
+    focusValue: "Practical web apps, responsive UI, and team growth",
+    stackLabel: "Main stack",
+    stackValue: "Angular, TypeScript, C#, Blazor",
+    visualNote: "Commercial client work behind me. Growing through practical web development.",
+  },
+  home: {
+    label: "Overview",
+    title: "Junior web developer with commercial e-commerce experience.",
+    intro:
+      "This portfolio shows the kind of work I can already do: building responsive interfaces, product pages, and practical web features while continuing to grow inside real development workflows.",
+    aboutCardTitle: "About and direction",
+    aboutCardText:
+      "Commercial background, current focus, and the way I approach junior web development.",
+    skillsCardTitle: "Web skills and stack",
+    skillsCardText: "Core technologies, frontend strengths, and the tools I work with most often.",
+    projectsCardTitle: "Selected projects",
+    projectsCardText: "Commercial and personal web projects that show what I built and contributed to.",
+    contactCardTitle: "Contact and availability",
+    contactCardText: "Reach out about junior roles, freelance tasks, or a concrete web project need.",
+    highlights: [
+      {
+        title: "Commercial E-commerce",
+        description:
+          "I already have commercial experience building user-facing e-commerce features for a real external client.",
+      },
+      {
+        title: "Responsive Web UI",
+        description:
+          "I focus on practical interfaces, layouts, and product flows that work clearly across screen sizes.",
+      },
+      {
+        title: "Professional Growth",
+        description:
+          "I want to keep improving inside a professional development team through real features, feedback, and delivery work.",
+      },
+    ],
+    processLabel: "Process",
+    processTitle: "How I approach the work.",
+    processSteps: [
+      {
+        step: "01",
+        title: "Understand the feature",
+        description:
+          "Start from the business goal, the user flow, and the screen or feature that needs to be built.",
+      },
+      {
+        step: "02",
+        title: "Build the web flow",
+        description:
+          "Implement the page, states, and responsive behavior with a focus on practical use rather than decoration.",
+      },
+      {
+        step: "03",
+        title: "Refine and improve",
+        description:
+          "Fix issues, tighten UI details, and improve the result through feedback and iteration.",
+      },
+    ],
+  },
+  skills: {
+    label: "Skills",
+    title: "Core web technologies, frontend work, and learning direction.",
+    intro:
+      "A structured view of the technologies I use most, the frontend areas I handle directly, and the tools I know at a basic level.",
+    categoriesTitle: "Skill groups",
+    categories: [
+      {
+        title: "Core Technologies",
+        items: ["C#", "Blazor", "JavaScript", "TypeScript", "HTML/CSS", "SQL", "Git"],
+        note: "Technologies I have used directly in commercial or personal web projects.",
+      },
+      {
+        title: "Frontend",
+        items: ["Angular", "Responsive Design", "Routing", "Forms", "UI Components"],
+        note: "The frontend areas I work with when building pages, flows, and responsive UI.",
+      },
+      {
+        title: "Basic Knowledge",
+        items: ["React", "Java", "Python", "C++", "REST API", "Backend Fundamentals"],
+        note: "Topics I can work with at a basic level while continuing to deepen them.",
+      },
+    ],
+    focusTitle: "Practical focus",
+    focusAreas: [
+      "Commercial e-commerce features",
+      "Responsive UI and component work",
+      "Angular and TypeScript growth",
+      "Working inside a professional development team",
+    ],
+    badgesTitle: "Tools",
+    badges: [
+      "Visual Studio Code",
+      "JetBrains Rider",
+      "GitHub",
+      "Microsoft Office",
+      "AI-assisted coding tools",
+    ],
+    ctaText:
+      "Projects section shows how these skills were applied in real and practice-focused web applications.",
+  },
+  about: {
+    label: "About",
+    title: "Junior web developer with commercial e-commerce experience.",
+    intro:
+      "I’m Artem Diatlenko, a junior web developer based in Warsaw. My commercial experience comes from NetNovate, where I worked on DomParfum, an e-commerce web application built for an external client.",
+    whoIAm: "Who I am",
+    whoIAmP1:
+      "At NetNovate I was one of the first developers in a small team building DomParfum. I contributed to the product catalogue, filtering logic, product pages, cart flow, responsive UI components, and basic backend-related features needed to support the application.",
+    whoIAmP2:
+      "Today I focus on Angular, TypeScript, C#, JavaScript, and practical web development. I am strongest on user-facing web work, while continuing to grow my backend fundamentals without overstating that side of my experience.",
+    coreStack: "Core stack",
+    background: "Context",
+    focusLabel: "Focus",
+    focusValue: "Junior web development, Angular/TypeScript, C#/Blazor, and practical product work",
+    locationLabel: "Location",
+    locationValue: "Warsaw, Poland",
+    languagesLabel: "Languages",
+    languagesValue: "English, Polish, Ukrainian, Russian",
+    principlesTitle: "Working principles",
+    principles: [
+      "Build useful web features before polishing presentation.",
+      "Keep interfaces responsive, readable, and practical to use.",
+      "Treat bug fixing, cleanup, and iteration as part of normal delivery work.",
+      "Keep learning through real tasks, not inflated claims.",
+    ],
+    experienceLabel: "Experience",
+    experienceTitle: "NetNovate",
+    experienceRoleLabel: "Role",
+    experienceCompanyLabel: "Company",
+    experiencePeriodLabel: "Period",
+    experienceLocationLabel: "Location",
+    experience: {
+      role: "Junior Web Developer",
+      company: "NetNovate",
+      period: "Jul 2023 – Mar 2024",
+      location: "Warsaw, Poland",
+      bullets: [
+        "Worked as one of the first developers in a small software team building a commercial e-commerce web application for an external client.",
+        "Developed frontend and basic backend features using C#, Blazor, JavaScript, HTML/CSS, SQL, and Git.",
+        "Implemented product catalogue, product listing, filtering logic, product pages, cart flow, and responsive UI components.",
+        "Collaborated with a 3-person development team, product manager, and designer.",
+        "Participated in the project from an early stage, including feature implementation, bug fixing, and code organization.",
       ],
-      focusLabel: "Focus",
-      focusValue: "UI implementation, structured interfaces, and product delivery",
-      stackLabel: "Stack",
-      stackValue: "React, Angular, TypeScript",
-      visualNote: "Grounded in frontend delivery, expanding through real product work.",
     },
+    timelineTitle: "Recent path",
+    timeline: [
+      {
+        period: "2026",
+        title: "Portfolio repositioning",
+        description:
+          "Updated the portfolio to reflect a clearer junior web developer position and more practical project presentation.",
+      },
+      {
+        period: "2025",
+        title: "Angular and web practice",
+        description:
+          "Built more practice projects around Angular, TypeScript, routing, forms, and responsive layouts.",
+      },
+      {
+        period: "2023-2024",
+        title: "NetNovate and DomParfum",
+        description:
+          "Gained commercial experience in a small team building a client e-commerce web application with C#, Blazor, JavaScript, HTML/CSS, SQL, and Git.",
+      },
+    ],
+  },
+  projects: {
+    label: "Projects",
+    title: "Commercial and practice-based web projects.",
+    intro:
+      "Projects that reflect my commercial e-commerce experience, Angular work, and personal web development practice.",
+    role: "Role",
+    impact: "Summary",
+    year: "Year",
+    status: "Status",
+    highlights: "Highlights",
+    galleryTitle: "Selected screenshots",
+    ctaRepo: "GitHub",
+    ctaLive: "Live site",
+    items: [
+      {
+        name: "DomParfum - Commercial E-commerce Web Application",
+        description:
+          "Commercial online perfume store built as part of a small development team for an external client.",
+        stack: "C#, Blazor, JavaScript, HTML/CSS, SQL, Git",
+        status: "Live / private repository",
+        role: "Web Developer",
+        impact:
+          "Worked on real client-facing e-commerce features and supporting product logic in a commercial application.",
+        highlights: [
+          "Product catalogue and product listing",
+          "Filtering logic and product pages",
+          "Cart flow and responsive UI components",
+          "Frontend work with basic backend-related features",
+        ],
+        note:
+          "Source code is private due to the commercial nature of the project. Selected screenshots are available below.",
+        screenshots: [
+          {
+            src: "/project-screens/domparfum-home.png",
+            alt: "DomParfum home page with storefront hero and featured products",
+            label: "Home page",
+          },
+          {
+            src: "/project-screens/domparfum-catalog.png",
+            alt: "DomParfum catalog page with filter sidebar and product grid",
+            label: "Catalog and filters",
+          },
+          {
+            src: "/project-screens/domparfum-product.png",
+            alt: "DomParfum product page with product details and purchase action",
+            label: "Product page",
+          },
+          {
+            src: "/project-screens/domparfum-cart.png",
+            alt: "DomParfum cart page with selected product and checkout form",
+            label: "Cart flow",
+          },
+        ],
+        year: "2023-2024",
+        liveHref: "https://domparfum.com.ua/",
+      },
+      {
+        name: "Leleka Construction - Construction Company Website",
+        description: "Responsive multilingual website for a construction company operating in Poland.",
+        stack: "Angular 19, TypeScript, Angular Router, Reactive Forms, Transloco, RxJS",
+        status: "Public repository",
+        role: "Web Developer",
+        impact:
+          "Built a structured Angular website around company presentation, vacancies, and multilingual content.",
+        highlights: [
+          "Responsive layout and multilingual content",
+          "Pages: Home, About, Clients, Vacancies, Vacancy Details, Contact",
+          "Routing, Reactive Forms, and reusable UI components",
+        ],
+        year: "2025",
+        repoHref: "https://github.com/ArtemDiatlenko/Leleka_Construction",
+      },
+      {
+        name: "Portfolio",
+        description: "Personal portfolio website built with React, TypeScript, Vite, and Tailwind CSS.",
+        stack: "React, TypeScript, Vite, Tailwind CSS",
+        status: "Live / public repository",
+        role: "Web Developer",
+        impact:
+          "A personal project used to present my experience, projects, and junior web developer positioning.",
+        highlights: [
+          "Responsive layout",
+          "Multilingual content",
+          "Project cards and contact section",
+          "Clean component-based structure",
+        ],
+        year: "2026",
+        liveHref: "https://portfolio-duj1.vercel.app",
+        repoHref: "https://github.com/ArtemDiatlenko/portfolio",
+      },
+    ],
+  },
+  contact: {
+    label: "Contact",
+    title: "Let’s talk.",
+    intro:
+      "Reach out if you are hiring for a junior web developer role or want to talk about a practical web project. I am based in Warsaw and interested in growing through real product work inside a professional team.",
+    availability: "Availability",
+    availabilityP1:
+      "I am open to junior web developer roles, freelance tasks, and project work where I can contribute to responsive UI, web flows, and practical feature delivery.",
+    availabilityP2:
+      "My strongest experience today comes from commercial e-commerce work, Angular and TypeScript growth, and C#/Blazor-based product development in a small team.",
+    responseLabel: "Typical response",
+    responseValue: "Within 24 hours",
+    timezoneLabel: "Timezone",
+    timezoneValue: "CET (Warsaw)",
+    channels: {
+      email: "Email",
+      linkedIn: "LinkedIn",
+      github: "GitHub",
+      portfolio: "Portfolio",
+      location: "Location",
+      phone: "Phone",
+    },
+    processTitle: "How I work",
+    process: [
+      {
+        title: "Share the context",
+        description:
+          "Share the product context, current stage, and the specific screens or web features that need attention.",
+      },
+      {
+        title: "Align the scope",
+        description: "We define the priorities, expected output, and the most realistic first step for the work.",
+      },
+      {
+        title: "Build in iterations",
+        description:
+          "I implement, fix, and refine in visible steps so feedback stays practical and the result keeps moving forward.",
+      },
+    ],
+  },
+  footer: {
+    rights: "© 2026 Artem Diatlenko. All rights reserved.",
+  },
+  meta: {
     home: {
-      label: "Overview",
-      title: "Frontend-focused work with a practical, product-driven approach.",
-      intro:
-        "This portfolio is a short view of how I work: clear interfaces, structured implementation, and steady growth through commercial and personal projects.",
-      aboutCardTitle: "About and direction",
-      aboutCardText: "Background, experience, and the way I think about frontend work.",
-      skillsCardTitle: "Frontend skills and stack",
-      skillsCardText: "Stack, delivery habits, and the areas I am actively deepening.",
-      projectsCardTitle: "Selected projects",
-      projectsCardText: "Commercial and personal work that shows how I build and what I have shipped.",
-      contactCardTitle: "Contact and availability",
-      contactCardText: "Reach out about roles, freelance work, or a concrete product need.",
-      highlights: [
-        {
-          title: "Interface Clarity",
-          description:
-            "I start from hierarchy, layout, and states so a screen is understandable before extra polish is added.",
-        },
-        {
-          title: "Structured Delivery",
-          description:
-            "Reusable components, predictable structure, and readable implementation make the work easier to extend.",
-        },
-        {
-          title: "Task-Oriented Thinking",
-          description:
-            "I look at UI through the job it needs to support, not only through how it looks in isolation.",
-        },
-      ],
-      processLabel: "Process",
-      processTitle: "How I move work forward.",
-      processSteps: [
-        {
-          step: "01",
-          title: "Understand the context",
-          description:
-            "Start with the goal, the constraints, and the task the interface needs to support.",
-        },
-        {
-          step: "02",
-          title: "Build the foundation",
-          description:
-            "Lay out components, states, and responsive behavior so the solution stays clear from the first iteration.",
-        },
-        {
-          step: "03",
-          title: "Refine for release",
-          description:
-            "Tighten the details, accessibility, and UI behavior so the result is ready for real use.",
-        },
-      ],
-    },
-    skills: {
-      label: "Skills",
-      title: "Frontend tools, delivery habits, and current growth areas.",
-      intro:
-        "A closer look at the technologies I use, the UI work I handle with confidence, and the areas I am pushing further.",
-      categoriesTitle: "Core areas",
-      categories: [
-        {
-          title: "Frontend stack",
-          items: ["React", "Angular", "TypeScript", "JavaScript", "HTML", "CSS"],
-          note: "The libraries and languages behind most of my day-to-day implementation work.",
-        },
-        {
-          title: "UI delivery",
-          items: ["Component Architecture", "Responsive Layouts", "Accessibility", "State Handling", "UI Polish", "Code Reviews"],
-          note: "The practical habits that keep interfaces readable, responsive, and easier to maintain.",
-        },
-        {
-          title: "Growth areas",
-          items: ["Backend Basics", "Product Thinking", "API Integration", "Performance", "Testing", "Broader Delivery"],
-          note: "The next layer I am expanding through real projects, not only theory.",
-        },
-      ],
-      focusTitle: "What I am sharpening now",
-      focusAreas: [
-        "UI implementation for product screens",
-        "Reusable component structure",
-        "Responsive behavior and accessibility",
-        "Broader full-stack understanding",
-      ],
-      badgesTitle: "Tooling",
-      badges: [
-        "React",
-        "Angular",
-        "Blazor",
-        "MudBlazor",
-        "TypeScript",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Vite",
-        "ESLint",
-        "Git",
-        "Tailwind CSS",
-        "PostCSS",
-      ],
-      ctaText: "Project pages show where these tools move from theory into shipped interface work.",
+      title: "Artem Diatlenko — Junior Web Developer",
+      description:
+        "Portfolio of Artem Diatlenko, Junior Web Developer based in Warsaw, focused on Angular, TypeScript, C#, JavaScript and practical web applications.",
     },
     about: {
-      label: "About",
-      title: "Background, working style, and current direction.",
-      intro:
-        "I’m Artem Diatlenko, a developer based in Warsaw with commercial experience in frontend work. This page gives the personal context behind the projects, stack, and direction shown elsewhere in the portfolio.",
-      whoIAm: "Who I am",
-      whoIAmP1:
-        "Most of my work sits close to the interface: building screens, structuring components, and making product flows feel clear across devices. I pay attention to how layout, states, and small details support actual use, not just presentation.",
-      whoIAmP2:
-        "Commercial work in Blazor and Angular gave me a practical base in shipping and maintaining product UI. React and TypeScript are the tools I keep pushing further while I broaden my understanding of backend concerns and full application delivery.",
-      coreStack: "Core stack",
-      background: "Context",
-      focusLabel: "Focus",
-      focusValue: "UI implementation, component structure, and product-facing frontend work",
-      locationLabel: "Location",
-      locationValue: "Warsaw, Poland",
-      languagesLabel: "Languages",
-      languagesValue: "English, Polish, Ukrainian, Russian",
-      principlesTitle: "Working principles",
-      principles: [
-        "Put logic and hierarchy in order before adding extra polish.",
-        "A good interface should be readable in use, not only attractive on a screenshot.",
-        "Treat responsiveness, focus states, and accessibility as part of execution.",
-        "Prefer patterns that can be repeated over quick one-off workarounds.",
-      ],
-      timelineTitle: "Recent direction",
-      timeline: [
-        {
-          period: "2026",
-          title: "Portfolio rebuild",
-          description:
-            "Reworked the portfolio into a smaller, clearer presentation of real frontend strengths and more disciplined content.",
-        },
-        {
-          period: "2025",
-          title: "Frontend depth",
-          description:
-            "Spent more time on reusable components, TypeScript structure, and UI decisions that scale better over time.",
-        },
-        {
-          period: "2024",
-          title: "Commercial product work",
-          description:
-            "Built delivery habits in commercial Angular and Blazor work, including maintenance, iteration, and product constraints.",
-        },
-      ],
+      title: "About | Artem Diatlenko",
+      description: "Junior web developer background, NetNovate experience, and practical product work.",
+    },
+    skills: {
+      title: "Skills | Artem Diatlenko",
+      description: "Core technologies, frontend skills, tools, and basic technical knowledge.",
     },
     projects: {
-      label: "Projects",
-      title: "Selected work and practical builds.",
-      intro:
-        "A small set of commercial and personal projects that shows my frontend work in more concrete terms.",
-      role: "Role",
-      impact: "Impact",
-      year: "Year",
-      ctaRepo: "Repository",
-      ctaLive: "Live site",
-      items: [
-        {
-          name: "Diorik / Domparfum",
-          description:
-            "Commercial e-commerce project for a perfume and cosmetics store, delivered as a live product with catalog-style pages, storefront UX, and production-focused implementation.",
-          stack: "Blazor Server, MudBlazor, C#, HTML, CSS",
-          status: "Live / commercial",
-          role: "Frontend development and partial backend work",
-          impact: "Worked on a real business-facing product and gained practical experience shipping and supporting a live commercial website.",
-          year: "2023-2024",
-          liveHref: "https://domparfum.com.ua/",
-        },
-        {
-          name: "Leleka Construction",
-          description:
-            "Angular-based website concept for a construction company, planned as a recruiting and company-presentation project aimed at attracting new workers.",
-          stack: "Angular, TypeScript, HTML, CSS, Transloco",
-          status: "Prototype",
-          role: "Frontend implementation and product structure",
-          impact: "A practical example of building a business-oriented website around content structure, multilingual setup, and recruitment-focused presentation.",
-          year: "2025",
-          repoHref: "https://github.com/ArtemDiatlenko/Leleka_Construction",
-        },
-        {
-          name: "Portfolio Website",
-          description:
-            "My personal portfolio built with React, Vite, and Tailwind, focused on clean structure, reusable sections, and bilingual content.",
-          stack: "React, TypeScript, Vite, Tailwind",
-          status: "Live / evolving",
-          role: "Frontend implementation, UI structure, content direction",
-          impact: "Helps me present my work more clearly and serves as a small product in itself for testing layout, content, and responsive polish.",
-          year: "2026",
-          repoHref: "https://github.com/ArtemDiatlenko/portfolio",
-        },
-      ],
+      title: "Projects | Artem Diatlenko",
+      description: "Commercial e-commerce, Angular, and portfolio projects with practical web development details.",
     },
     contact: {
-      label: "Contact",
-      title: "Let’s talk.",
-      intro:
-        "Reach out if you have a frontend role, a freelance task, or a product interface that needs implementation support. The fastest way to start is with a concrete problem, scope, or set of screens.",
-      availability: "Availability",
-      availabilityP1:
-        "I’m open to frontend roles, freelance work, and product collaboration, especially where there is real UI implementation, cleanup, or delivery work to do.",
-      availabilityP2:
-        "I work best when the scope is concrete, priorities are visible, and we can iterate toward a usable result instead of discussing abstractions for too long.",
-      responseLabel: "Typical response",
-      responseValue: "Within 24 hours",
-      timezoneLabel: "Timezone",
-      timezoneValue: "CET (Warsaw)",
-      channels: {
-        email: "Email",
-        linkedIn: "LinkedIn",
-        github: "GitHub",
-        phone: "Phone",
-      },
-      processTitle: "How I usually work",
-      process: [
-        {
-          title: "Share the context",
-          description: "Send the product context, current stage, and the specific screens or problems that need attention.",
-        },
-        {
-          title: "Align the scope",
-          description: "We narrow the work to clear priorities, expected output, and a realistic first step.",
-        },
-        {
-          title: "Build in iterations",
-          description:
-            "I work through implementation in visible increments so feedback stays practical and the result stays shippable.",
-        },
-      ],
+      title: "Contact | Artem Diatlenko",
+      description: "Contact links, location, availability, and junior web developer positioning.",
     },
-    footer: {
-      rights: "© 2026 Artem Diatlenko. All rights reserved.",
-    },
-    meta: {
-      home: {
-        title: "Artem Diatlenko | Frontend Developer",
-        description: "Portfolio overview with frontend approach, selected work, and contact details.",
-      },
-      about: {
-        title: "About | Artem Diatlenko",
-        description: "Personal background, working principles, languages, and current development direction.",
-      },
-      skills: {
-        title: "Skills | Artem Diatlenko",
-        description:
-          "Stack, UI delivery strengths, and areas of ongoing technical growth.",
-      },
-      projects: {
-        title: "Projects | Artem Diatlenko",
-        description: "Commercial and personal projects with concrete role, impact, and stack details.",
-      },
-      contact: {
-        title: "Contact | Artem Diatlenko",
-        description: "Availability, contact channels, and a simple way to start a conversation.",
-      },
-    },
+  },
 } as const;
 
 const plTranslations = {
-    nav: {
-      home: "Start",
-      about: "O mnie",
-      skills: "Umiejętności",
-      projects: "Projekty",
-      contact: "Kontakt",
-      menu: "Otwórz menu nawigacji",
-      languageSwitch: "Przełączanie języka",
-    },
-    hero: {
-      role: "Frontend Developer",
-      intro:
-        "Frontend developer z Warszawy z komercyjnym doświadczeniem w pracy nad interfejsami produktowymi. Najbliżej mi do implementacji UI, czytelnej struktury i ekranów, które są gotowe do realnego użycia.",
-      viewProjects: "Zobacz projekty",
-      exploreSkills: "Zobacz umiejętności",
-      contactMe: "Skontaktuj się",
-      openToWork: "Dostępny",
-      basedIn: "Mieszkam w",
-      city: "Warszawa",
-      availabilityNote: "Otwarty na zespoły produktowe, freelance i konkretne zadania frontendowe.",
-      quickFacts: [
-        {
-          value: "UI",
-          label: "Główny obszar",
-        },
-        {
-          value: "Komercja",
-          label: "Praktyka projektowa",
-        },
-        {
-          value: "Rozwój",
-          label: "Szerszy zakres",
-        },
+  nav: {
+    home: "Start",
+    about: "O mnie",
+    skills: "Umiejętności",
+    projects: "Projekty",
+    contact: "Kontakt",
+    menu: "Otwórz menu nawigacji",
+    languageSwitch: "Przełączanie języka",
+  },
+  hero: {
+    role: "Junior Web Developer",
+    intro:
+      "Junior web developer z Warszawy z komercyjnym doświadczeniem przy klienckiej aplikacji e-commerce. Pracuję z Angular, TypeScript, JavaScript, C#, Blazor, HTML/CSS, SQL i Git, a dalej chcę rozwijać się w profesjonalnym zespole developerskim.",
+    viewProjects: "Zobacz projekty",
+    exploreSkills: "Zobacz umiejętności",
+    contactMe: "Skontaktuj się",
+    openToWork: "Dostępny",
+    basedIn: "Mieszkam w",
+    city: "Warszawa",
+    availabilityNote: "Otwarty na role junior web developer, zadania freelance i pracę w zespole produktowym.",
+    quickFacts: [
+      {
+        value: "E-commerce",
+        label: "Projekt komercyjny",
+      },
+      {
+        value: "Angular",
+        label: "Obecny fokus",
+      },
+      {
+        value: "C# / Blazor",
+        label: "Zaplecze produktowe",
+      },
+    ],
+    focusLabel: "Kierunek",
+    focusValue: "Praktyczne aplikacje webowe, responsywne UI i rozwój w zespole",
+    stackLabel: "Główny stack",
+    stackValue: "Angular, TypeScript, C#, Blazor",
+    visualNote: "Za mną komercyjna praca dla klienta. Dalej rozwijam się przez praktyczny web development.",
+  },
+  home: {
+    label: "Przegląd",
+    title: "Junior web developer z komercyjnym doświadczeniem e-commerce.",
+    intro:
+      "To portfolio pokazuje rodzaj pracy, który już potrafię wykonywać: budowę responsywnych interfejsów, stron produktowych i praktycznych funkcji webowych, przy jednoczesnym dalszym rozwoju w realnym środowisku developerskim.",
+    aboutCardTitle: "O mnie i kierunek",
+    aboutCardText:
+      "Komercyjne tło, obecny fokus i sposób, w jaki podchodzę do pracy junior web developera.",
+    skillsCardTitle: "Umiejętności webowe i stack",
+    skillsCardText: "Główne technologie, mocne strony frontendowe i narzędzia, z których korzystam najczęściej.",
+    projectsCardTitle: "Wybrane projekty",
+    projectsCardText: "Projekty komercyjne i własne, które pokazują, co zbudowałem i do czego się realnie dokładałem.",
+    contactCardTitle: "Kontakt i dostępność",
+    contactCardText: "Napisz w sprawie roli juniorskiej, zadania freelance albo konkretnej potrzeby webowej.",
+    highlights: [
+      {
+        title: "Komercyjne E-commerce",
+        description:
+          "Mam już komercyjne doświadczenie przy budowie funkcji e-commerce dla realnego zewnętrznego klienta.",
+      },
+      {
+        title: "Responsywne Web UI",
+        description:
+          "Skupiam się na praktycznych interfejsach, układach i flow produktu, które działają czytelnie na różnych ekranach.",
+      },
+      {
+        title: "Rozwój zawodowy",
+        description:
+          "Chcę dalej rozwijać się w profesjonalnym zespole przez realne funkcje, feedback i codzienną pracę wdrożeniową.",
+      },
+    ],
+    processLabel: "Proces",
+    processTitle: "Jak podchodzę do pracy.",
+    processSteps: [
+      {
+        step: "01",
+        title: "Zrozumienie funkcji",
+        description:
+          "Zaczynam od celu biznesowego, flow użytkownika i konkretnego ekranu albo funkcji, którą trzeba zbudować.",
+      },
+      {
+        step: "02",
+        title: "Budowa flow webowego",
+        description:
+          "Implementuję stronę, stany i responsywność z naciskiem na praktyczne użycie, a nie samą dekorację.",
+      },
+      {
+        step: "03",
+        title: "Dopracowanie i poprawa",
+        description:
+          "Usuwam problemy, dociskam detale UI i poprawiam wynik przez feedback i kolejne iteracje.",
+      },
+    ],
+  },
+  skills: {
+    label: "Umiejętności",
+    title: "Główne technologie webowe, praca frontendowa i kierunek nauki.",
+    intro:
+      "Uporządkowany przegląd technologii, których używam najczęściej, obszarów frontendowych, które robię bezpośrednio, oraz narzędzi, które znam na poziomie podstawowym.",
+    categoriesTitle: "Grupy umiejętności",
+    categories: [
+      {
+        title: "Główne technologie",
+        items: ["C#", "Blazor", "JavaScript", "TypeScript", "HTML/CSS", "SQL", "Git"],
+        note: "Technologie, których używałem bezpośrednio w projektach komercyjnych albo własnych.",
+      },
+      {
+        title: "Frontend",
+        items: ["Angular", "Responsive Design", "Routing", "Forms", "Komponenty UI"],
+        note: "Obszary frontendowe, z którymi pracuję przy budowie stron, flow i responsywnego UI.",
+      },
+      {
+        title: "Podstawowa wiedza",
+        items: ["React", "Java", "Python", "C++", "REST API", "Podstawy backendu"],
+        note: "Tematy, z którymi mogę pracować na poziomie podstawowym i które dalej rozwijam.",
+      },
+    ],
+    focusTitle: "Praktyczny fokus",
+    focusAreas: [
+      "Komercyjne funkcje e-commerce",
+      "Responsywne UI i praca komponentowa",
+      "Rozwój w Angular i TypeScript",
+      "Praca w profesjonalnym zespole developerskim",
+    ],
+    badgesTitle: "Narzędzia",
+    badges: [
+      "Visual Studio Code",
+      "JetBrains Rider",
+      "GitHub",
+      "Microsoft Office",
+      "AI-assisted coding tools",
+    ],
+    ctaText:
+      "Sekcja projektów pokazuje, jak te umiejętności zostały wykorzystane w realnych i praktycznych aplikacjach webowych.",
+  },
+  about: {
+    label: "O mnie",
+    title: "Junior web developer z komercyjnym doświadczeniem e-commerce.",
+    intro:
+      "Jestem Artem Diatlenko, junior web developerem z Warszawy. Moje komercyjne doświadczenie pochodzi z NetNovate, gdzie pracowałem przy DomParfum, aplikacji e-commerce budowanej dla zewnętrznego klienta.",
+    whoIAm: "Kim jestem",
+    whoIAmP1:
+      "W NetNovate byłem jednym z pierwszych developerów w małym zespole budującym DomParfum. Pracowałem nad katalogiem produktów, logiką filtrowania, stronami produktowymi, flow koszyka, responsywnymi komponentami UI oraz podstawowymi funkcjami po stronie backendowej potrzebnymi do działania aplikacji.",
+    whoIAmP2:
+      "Dziś skupiam się na Angular, TypeScript, C#, JavaScript i praktycznym web developmencie. Najmocniej czuję się po stronie user-facing webu, równolegle rozwijając podstawy backendu bez przesadnego zawyżania tej części mojego doświadczenia.",
+    coreStack: "Główny stack",
+    background: "Kontekst",
+    focusLabel: "Fokus",
+    focusValue: "Junior web development, Angular/TypeScript, C#/Blazor i praktyczna praca produktowa",
+    locationLabel: "Lokalizacja",
+    locationValue: "Warszawa, Polska",
+    languagesLabel: "Języki",
+    languagesValue: "Angielski, Polski, Ukraiński, Rosyjski",
+    principlesTitle: "Zasady pracy",
+    principles: [
+      "Najpierw buduję użyteczne funkcje webowe, dopiero potem dodatkowy polish.",
+      "Interfejs ma być responsywny, czytelny i praktyczny w użyciu.",
+      "Bug fixing, porządkowanie i iteracje traktuję jako normalną część delivery.",
+      "Rozwijam się przez realne zadania, a nie zawyżone deklaracje.",
+    ],
+    experienceLabel: "Doświadczenie",
+    experienceTitle: "NetNovate",
+    experienceRoleLabel: "Rola",
+    experienceCompanyLabel: "Firma",
+    experiencePeriodLabel: "Okres",
+    experienceLocationLabel: "Lokalizacja",
+    experience: {
+      role: "Junior Web Developer",
+      company: "NetNovate",
+      period: "Jul 2023 – Mar 2024",
+      location: "Warsaw, Poland",
+      bullets: [
+        "Pracowałem jako jeden z pierwszych developerów w małym zespole tworzącym komercyjną aplikację e-commerce dla zewnętrznego klienta.",
+        "Tworzyłem funkcje frontendowe i podstawowe funkcje backendowe z użyciem C#, Blazor, JavaScript, HTML/CSS, SQL i Git.",
+        "Implementowałem katalog produktów, listing produktów, logikę filtrowania, strony produktowe, flow koszyka i responsywne komponenty UI.",
+        "Współpracowałem z 3-osobowym zespołem developerskim, product managerem i designerem.",
+        "Brałem udział w projekcie od wczesnego etapu, w tym w implementacji funkcji, naprawie błędów i porządkowaniu kodu.",
       ],
-      focusLabel: "Fokus",
-      focusValue: "Implementacja UI, uporządkowane interfejsy i praca nad produktem",
-      stackLabel: "Stack",
-      stackValue: "React, Angular, TypeScript",
-      visualNote: "Mocna baza w realizacji frontendu, dalej rozwijana w realnych produktach.",
     },
+    timelineTitle: "Ostatnia ścieżka",
+    timeline: [
+      {
+        period: "2026",
+        title: "Nowe pozycjonowanie portfolio",
+        description:
+          "Zaktualizowałem portfolio tak, aby czytelniej pokazywało mnie jako junior web developera i bardziej praktycznie prezentowało projekty.",
+      },
+      {
+        period: "2025",
+        title: "Angular i praktyka webowa",
+        description:
+          "Budowałem kolejne projekty ćwiczeniowe wokół Angular, TypeScript, routingu, formularzy i responsywnych layoutów.",
+      },
+      {
+        period: "2023-2024",
+        title: "NetNovate i DomParfum",
+        description:
+          "Zdobyłem komercyjne doświadczenie w małym zespole budującym kliencką aplikację e-commerce z użyciem C#, Blazor, JavaScript, HTML/CSS, SQL i Git.",
+      },
+    ],
+  },
+  projects: {
+    label: "Projekty",
+    title: "Komercyjne i praktyczne projekty webowe.",
+    intro:
+      "Projekty, które pokazują moje komercyjne doświadczenie e-commerce, pracę w Angularze i własną praktykę w web developmencie.",
+    role: "Rola",
+    impact: "Podsumowanie",
+    year: "Rok",
+    status: "Status",
+    highlights: "Zakres",
+    galleryTitle: "Wybrane zrzuty ekranu",
+    ctaRepo: "GitHub",
+    ctaLive: "Strona live",
+    items: [
+      {
+        name: "DomParfum - Komercyjna aplikacja e-commerce",
+        description:
+          "Komercyjny sklep internetowy z perfumami zbudowany jako część pracy małego zespołu developerskiego dla zewnętrznego klienta.",
+        stack: "C#, Blazor, JavaScript, HTML/CSS, SQL, Git",
+        status: "Live / prywatne repozytorium",
+        role: "Web Developer",
+        impact:
+          "Pracowałem nad realnymi funkcjami e-commerce dla klienta oraz logiką wspierającą działanie produktu.",
+        highlights: [
+          "Katalog produktów i listing produktów",
+          "Logika filtrowania i strony produktowe",
+          "Flow koszyka i responsywne komponenty UI",
+          "Prace frontendowe i podstawowe funkcje backendowe",
+        ],
+        note:
+          "Kod źródłowy jest prywatny ze względu na komercyjny charakter projektu. Wybrane zrzuty ekranu są dostępne poniżej.",
+        screenshots: [
+          {
+            src: "/project-screens/domparfum-home.png",
+            alt: "Strona główna DomParfum z hero sklepu i wyróżnionymi produktami",
+            label: "Strona główna",
+          },
+          {
+            src: "/project-screens/domparfum-catalog.png",
+            alt: "Katalog DomParfum z panelem filtrów i siatką produktów",
+            label: "Katalog i filtry",
+          },
+          {
+            src: "/project-screens/domparfum-product.png",
+            alt: "Strona produktu DomParfum z detalami produktu i akcją zakupu",
+            label: "Strona produktowa",
+          },
+          {
+            src: "/project-screens/domparfum-cart.png",
+            alt: "Koszyk DomParfum z wybranym produktem i formularzem zamówienia",
+            label: "Koszyk",
+          },
+        ],
+        year: "2023-2024",
+        liveHref: "https://domparfum.com.ua/",
+      },
+      {
+        name: "Leleka Construction - Strona firmy budowlanej",
+        description: "Responsywna, wielojęzyczna strona internetowa dla firmy budowlanej działającej w Polsce.",
+        stack: "Angular 19, TypeScript, Angular Router, Reactive Forms, Transloco, RxJS",
+        status: "Publiczne repozytorium",
+        role: "Web Developer",
+        impact:
+          "Zbudowałem uporządkowaną stronę w Angularze wokół prezentacji firmy, wakatów i wielojęzycznych treści.",
+        highlights: [
+          "Responsywny layout i wielojęzyczne treści",
+          "Strony: Home, About, Clients, Vacancies, Vacancy Details, Contact",
+          "Routing, Reactive Forms i reużywalne komponenty UI",
+        ],
+        year: "2025",
+        repoHref: "https://github.com/ArtemDiatlenko/Leleka_Construction",
+      },
+      {
+        name: "Portfolio",
+        description: "Moje portfolio zbudowane z użyciem React, TypeScript, Vite i Tailwind CSS.",
+        stack: "React, TypeScript, Vite, Tailwind CSS",
+        status: "Live / publiczne repozytorium",
+        role: "Web Developer",
+        impact:
+          "Projekt własny używany do prezentowania doświadczenia, projektów i obecnego pozycjonowania jako junior web developer.",
+        highlights: [
+          "Responsywny layout",
+          "Wielojęzyczne treści",
+          "Karty projektów i sekcja kontaktu",
+          "Czysta, komponentowa struktura",
+        ],
+        year: "2026",
+        liveHref: "https://portfolio-duj1.vercel.app",
+        repoHref: "https://github.com/ArtemDiatlenko/portfolio",
+      },
+    ],
+  },
+  contact: {
+    label: "Kontakt",
+    title: "Porozmawiajmy.",
+    intro:
+      "Napisz, jeśli szukasz junior web developera albo chcesz porozmawiać o praktycznym projekcie webowym. Mieszkam w Warszawie i chcę rozwijać się przez realną pracę produktową w profesjonalnym zespole.",
+    availability: "Dostępność",
+    availabilityP1:
+      "Jestem otwarty na role junior web developera, zadania freelance i projekty, w których mogę pomagać przy responsywnym UI, flow webowych i praktycznym dostarczaniu funkcji.",
+    availabilityP2:
+      "Moje najmocniejsze obecne doświadczenie to komercyjne e-commerce, rozwój w Angular i TypeScript oraz produktowa praca w C#/Blazor w małym zespole.",
+    responseLabel: "Typowa odpowiedź",
+    responseValue: "Do 24 godzin",
+    timezoneLabel: "Strefa czasowa",
+    timezoneValue: "CET (Warszawa)",
+    channels: {
+      email: "Email",
+      linkedIn: "LinkedIn",
+      github: "GitHub",
+      portfolio: "Portfolio",
+      location: "Lokalizacja",
+      phone: "Telefon",
+    },
+    processTitle: "Jak pracuję",
+    process: [
+      {
+        title: "Podziel się kontekstem",
+        description:
+          "Prześlij kontekst produktu, obecny etap i konkretne ekrany albo funkcje webowe, które wymagają uwagi.",
+      },
+      {
+        title: "Ustalmy zakres",
+        description:
+          "Ustalamy priorytety, oczekiwany efekt i najbardziej realistyczny pierwszy krok dla pracy.",
+      },
+      {
+        title: "Pracujmy iteracyjnie",
+        description:
+          "Implementuję, poprawiam i dopracowuję rozwiązanie małymi krokami, żeby feedback był praktyczny, a efekt stale szedł do przodu.",
+      },
+    ],
+  },
+  footer: {
+    rights: "© 2026 Artem Diatlenko. Wszelkie prawa zastrzeżone.",
+  },
+  meta: {
     home: {
-      label: "Przegląd",
-      title: "Frontendowa praca oparta na strukturze i realnych potrzebach produktu.",
-      intro:
-        "To portfolio jest krótkim przeglądem mojego sposobu pracy: czytelne interfejsy, uporządkowana implementacja i rozwój przez projekty komercyjne oraz własne.",
-      aboutCardTitle: "O mnie i kierunek",
-      aboutCardText: "Tło, doświadczenie i sposób myślenia o pracy frontendowej.",
-      skillsCardTitle: "Umiejętności frontendowe i stack",
-      skillsCardText: "Stack, nawyki wykonawcze i obszary, które rozwijam dalej.",
-      projectsCardTitle: "Wybrane projekty",
-      projectsCardText: "Prace komercyjne i własne, które pokazują, jak buduję i co realnie zrealizowałem.",
-      contactCardTitle: "Kontakt i dostępność",
-      contactCardText: "Napisz w sprawie roli, freelance lub konkretnej potrzeby produktowej.",
-      highlights: [
-        {
-          title: "Jasność interfejsu",
-          description:
-            "Zaczynam od hierarchii, układu i stanów, żeby ekran był zrozumiały zanim dostanie dodatkowy polish.",
-        },
-        {
-          title: "Uporządkowana implementacja",
-          description:
-            "Cenię reużywalne komponenty, przewidywalną strukturę i kod, który łatwiej rozwijać.",
-        },
-        {
-          title: "Myślenie zadaniem",
-          description:
-            "Patrzę na UI przez pryzmat tego, co użytkownik ma zrobić, a nie tylko jak ekran wygląda.",
-        },
-      ],
-      processLabel: "Proces",
-      processTitle: "Jak prowadzę pracę.",
-      processSteps: [
-        {
-          step: "01",
-          title: "Złapanie kontekstu",
-          description:
-            "Najpierw cel, ograniczenia i zadanie, które interfejs ma faktycznie obsłużyć.",
-        },
-        {
-          step: "02",
-          title: "Budowa podstaw",
-          description:
-            "Układam komponenty, stany i responsywność tak, żeby rozwiązanie było czytelne od pierwszej iteracji.",
-        },
-        {
-          step: "03",
-          title: "Dopracowanie wydania",
-          description:
-            "Dociskam detale, dostępność i zachowanie UI, żeby efekt nadawał się do realnego użycia.",
-        },
-      ],
-    },
-    skills: {
-      label: "Umiejętności",
-      title: "Narzędzia frontendowe, sposób pracy i kierunek rozwoju.",
-      intro:
-        "Bliższe spojrzenie na technologie, z którymi pracuję, obszary UI, które robię najpewniej, i rzeczy, które rozwijam dalej.",
-      categoriesTitle: "Główne obszary",
-      categories: [
-        {
-          title: "Stack frontendowy",
-          items: ["React", "Angular", "TypeScript", "JavaScript", "HTML", "CSS"],
-          note: "Główne narzędzia stojące za codzienną implementacją interfejsów.",
-        },
-        {
-          title: "Dostarczanie UI",
-          items: ["Architektura komponentów", "Responsywne układy", "Dostępność", "Zarządzanie stanem", "UI polish", "Code review"],
-          note: "Praktyczne nawyki, które pomagają utrzymać UI czytelne, responsywne i łatwiejsze w utrzymaniu.",
-        },
-        {
-          title: "Obszary rozwoju",
-          items: ["Podstawy backendu", "Myślenie produktowe", "Integracja API", "Wydajność", "Testowanie", "Szersze delivery"],
-          note: "To kolejna warstwa, którą rozwijam przez realne projekty, a nie tylko teorię.",
-        },
-      ],
-      focusTitle: "Co teraz rozwijam",
-      focusAreas: [
-        "Implementacja UI dla ekranów produktowych",
-        "Reużywalna struktura komponentów",
-        "Responsywność i dostępność",
-        "Szersze rozumienie aplikacji poza frontendem",
-      ],
-      badgesTitle: "Narzędzia",
-      badges: [
-        "React",
-        "Angular",
-        "Blazor",
-        "MudBlazor",
-        "TypeScript",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Vite",
-        "ESLint",
-        "Git",
-        "Tailwind CSS",
-        "PostCSS",
-      ],
-      ctaText:
-        "Na stronach projektów widać, jak te narzędzia przekładają się na konkretne wdrożenia.",
+      title: "Artem Diatlenko — Junior Web Developer",
+      description:
+        "Portfolio of Artem Diatlenko, Junior Web Developer based in Warsaw, focused on Angular, TypeScript, C#, JavaScript and practical web applications.",
     },
     about: {
-      label: "O mnie",
-      title: "Tło, sposób pracy i obecny kierunek.",
-      intro:
-        "Jestem Artem Diatlenko, developerem z Warszawy z komercyjnym doświadczeniem frontendowym. Ta strona daje osobisty kontekst do projektów, stacka i kierunku pokazanych w reszcie portfolio.",
-      whoIAm: "Kim jestem",
-      whoIAmP1:
-        "Większość mojej pracy dzieje się blisko interfejsu: buduję ekrany, układam komponenty i pilnuję, żeby flow produktu było czytelne na różnych urządzeniach. Zwracam uwagę na to, jak layout, stany i drobne decyzje wspierają realne użycie, a nie tylko prezentację.",
-      whoIAmP2:
-        "Praca komercyjna w Blazorze i Angularze dała mi praktyczną bazę we wdrażaniu i utrzymaniu produktowego UI. React i TypeScript to narzędzia, które dalej pogłębiam, równolegle poszerzając rozumienie backendu i pełniejszego procesu budowy aplikacji.",
-      coreStack: "Główny stack",
-      background: "Kontekst",
-      focusLabel: "Fokus",
-      focusValue: "Implementacja UI, struktura komponentów i frontend po stronie produktu",
-      locationLabel: "Lokalizacja",
-      locationValue: "Warszawa, Polska",
-      languagesLabel: "Języki",
-      languagesValue: "Angielski, Polski, Ukraiński, Rosyjski",
-      principlesTitle: "Zasady pracy",
-      principles: [
-        "Najpierw porządkuję logikę i hierarchię, potem dokładam dodatkowy polish.",
-        "Interfejs ma być czytelny w użyciu, nie tylko estetyczny na screenie.",
-        "Responsywność, focus i dostępność traktuję jako część wykonania.",
-        "Lepsze są wzorce, które da się powtórzyć, niż szybkie jednorazowe obejścia.",
-      ],
-      timelineTitle: "Ostatni kierunek",
-      timeline: [
-        {
-          period: "2026",
-          title: "Przebudowa portfolio",
-          description:
-            "Przebudowałem portfolio na mniejszą, czytelniejszą prezentację realnych mocnych stron frontendowych.",
-        },
-        {
-          period: "2025",
-          title: "Pogłębienie frontendu",
-          description:
-            "Mocniej wszedłem w reużywalne komponenty, strukturę TypeScriptu i decyzje UI, które lepiej skalują się w czasie.",
-        },
-        {
-          period: "2024",
-          title: "Komercyjna praca produktowa",
-          description:
-            "Zbudowałem mocniejsze nawyki wdrożeniowe w komercyjnej pracy z Angularem i Blazorem, razem z utrzymaniem i iterowaniem produktu.",
-        },
-      ],
+      title: "O mnie | Artem Diatlenko",
+      description: "Tło junior web developera, doświadczenie z NetNovate i praktyczna praca produktowa.",
+    },
+    skills: {
+      title: "Umiejętności | Artem Diatlenko",
+      description: "Główne technologie, umiejętności frontendowe, narzędzia i podstawowa wiedza techniczna.",
     },
     projects: {
-      label: "Projekty",
-      title: "Wybrane realizacje i praktyczne projekty.",
-      intro:
-        "Mały zestaw projektów komercyjnych i własnych, które pokazują moją pracę frontendową w bardziej konkretny sposób.",
-      role: "Rola",
-      impact: "Wpływ",
-      year: "Rok",
-      ctaRepo: "Repozytorium",
-      ctaLive: "Strona live",
-      items: [
-        {
-          name: "Diorik / Domparfum",
-          description:
-            "Komercyjny projekt e-commerce dla sklepu z perfumami i kosmetykami, wdrożony jako działający produkt z układem katalogowym i praktycznym storefront UX.",
-          stack: "Blazor Server, MudBlazor, C#, HTML, CSS",
-          status: "Live / komercyjny",
-          role: "Frontend development i częściowo backend",
-          impact: "Realna praca przy produkcie biznesowym i praktyczne doświadczenie we wdrażaniu oraz rozwijaniu działającej strony komercyjnej.",
-          year: "2023-2024",
-          liveHref: "https://domparfum.com.ua/",
-        },
-        {
-          name: "Leleka Construction",
-          description:
-            "Koncept strony w Angularze dla firmy budowlanej, planowany jako projekt rekrutacyjny i wizerunkowy do pozyskiwania nowych pracowników.",
-          stack: "Angular, TypeScript, HTML, CSS, Transloco",
-          status: "Prototyp",
-          role: "Implementacja frontendu i struktura produktu",
-          impact: "Praktyczny przykład budowy strony biznesowej opartej na strukturze treści, wielojęzyczności i prezentacji ukierunkowanej na rekrutację.",
-          year: "2025",
-          repoHref: "https://github.com/ArtemDiatlenko/Leleka_Construction",
-        },
-        {
-          name: "Portfolio Website",
-          description:
-            "Moje portfolio zbudowane w React, Vite i Tailwind, z naciskiem na czytelną strukturę, reużywalne sekcje UI i wsparcie EN/PL.",
-          stack: "React, TypeScript, Vite, Tailwind",
-          status: "Live / rozwijane",
-          role: "Implementacja frontendu, struktura UI, kierunek contentowy",
-          impact: "Pomaga mi pokazać pracę w bardziej uporządkowany sposób i działa jako mały produkt do testowania layoutu, treści i responsive polishu.",
-          year: "2026",
-          repoHref: "https://github.com/ArtemDiatlenko/portfolio",
-        },
-      ],
+      title: "Projekty | Artem Diatlenko",
+      description: "Projekty e-commerce, Angular i portfolio pokazujące praktyczny web development.",
     },
     contact: {
-      label: "Kontakt",
-      title: "Porozmawiajmy.",
-      intro:
-        "Napisz, jeśli masz rolę frontendową, zadanie freelance albo interfejs produktu, który trzeba zaimplementować lub uporządkować. Najłatwiej zacząć od konkretnego problemu, zakresu albo zestawu ekranów.",
-      availability: "Dostępność",
-      availabilityP1:
-        "Jestem otwarty na role frontendowe, współpracę freelance i pracę produktową, szczególnie tam, gdzie jest realna implementacja, porządkowanie UI albo dostarczenie interfejsów.",
-      availabilityP2:
-        "Najlepiej pracuje mi się wtedy, gdy zakres jest konkretny, priorytety są widoczne, a rozwiązanie można iteracyjnie doprowadzić do używalnej formy.",
-      responseLabel: "Typowa odpowiedź",
-      responseValue: "Do 24 godzin",
-      timezoneLabel: "Strefa czasowa",
-      timezoneValue: "CET (Warszawa)",
-      channels: {
-        email: "Email",
-        linkedIn: "LinkedIn",
-        github: "GitHub",
-        phone: "Telefon",
-      },
-      processTitle: "Jak zwykle prowadzę współpracę",
-      process: [
-        {
-          title: "Podziel się kontekstem",
-          description:
-            "Wyślij kontekst produktu, obecny etap i konkretne ekrany albo problemy, które wymagają uwagi.",
-        },
-        {
-          title: "Ustalmy zakres",
-          description:
-            "Zawężamy pracę do jasnych priorytetów, oczekiwanego efektu i realistycznego pierwszego kroku.",
-        },
-        {
-          title: "Pracujmy iteracyjnie",
-          description:
-            "Prowadzę implementację małymi, widocznymi krokami, żeby feedback był praktyczny, a wynik nadawał się do wdrożenia.",
-        },
-      ],
+      title: "Kontakt | Artem Diatlenko",
+      description: "Linki kontaktowe, lokalizacja, dostępność i pozycjonowanie junior web developera.",
     },
-    footer: {
-      rights: "© 2026 Artem Diatlenko. Wszelkie prawa zastrzeżone.",
-    },
-    meta: {
-      home: {
-        title: "Artem Diatlenko | Frontend Developer",
-        description: "Przegląd portfolio z podejściem frontendowym, wybraną pracą i danymi kontaktowymi.",
-      },
-      about: {
-        title: "O mnie | Artem Diatlenko",
-        description: "Osobiste tło, zasady pracy, języki i obecny kierunek rozwoju.",
-      },
-      skills: {
-        title: "Umiejętności | Artem Diatlenko",
-        description: "Stack, mocne strony w dostarczaniu UI i obszary dalszego rozwoju technicznego.",
-      },
-      projects: {
-        title: "Projekty | Artem Diatlenko",
-        description: "Projekty komercyjne i własne z konkretną rolą, wpływem i detalami stacka.",
-      },
-      contact: {
-        title: "Kontakt | Artem Diatlenko",
-        description: "Dostępność, kanały kontaktu i prosty sposób na rozpoczęcie rozmowy.",
-      },
-    },
+  },
 } satisfies TranslationShape<typeof enTranslations>;
 
 export const translations = {

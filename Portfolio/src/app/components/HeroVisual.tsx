@@ -62,11 +62,11 @@ export default function HeroVisual() {
             </p>
             <p className="mt-2 text-sm font-medium leading-6 text-slate-800 dark:text-slate-100">{t.hero.stackValue}</p>
             <div className="mt-4 rounded-2xl border border-slate-200/70 bg-white/55 p-3 dark:border-slate-200/10 dark:bg-slate-900/30">
-              <div className="flex items-center justify-between">
-                <span className="text-[0.62rem] uppercase tracking-[0.16em] text-slate-500 dark:text-slate-300/70">
+              <div className="flex items-start justify-between gap-3">
+                <span className="min-w-0 text-[0.62rem] uppercase leading-4 tracking-[0.16em] text-slate-500 dark:text-slate-300/70">
                   {t.hero.role}
                 </span>
-                <span className="text-xs font-semibold text-slate-900 dark:text-white">{t.hero.openToWork}</span>
+                <span className="shrink-0 text-xs font-semibold text-slate-900 dark:text-white">{t.hero.openToWork}</span>
               </div>
               <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-200/80 dark:bg-slate-800/70">
                 <div className="hero-signal-bar" />

@@ -1,6 +1,7 @@
 import PageIntro from "../components/PageIntro";
 import { useLanguage } from "../components/useLanguage";
 import ScrollReveal from "../components/ScrollReveal";
+import { profileContacts } from "../profile";
 
 type ContactCardProps = {
   label: string;
@@ -17,7 +18,7 @@ function ContactCard({ label, value, href }: ContactCardProps) {
       className="contact-channel glass-card glass-card--interactive group rounded-[1.7rem] p-6"
     >
       <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300/70">{label}</p>
-      <p className="mt-3 text-lg text-slate-800 transition group-hover:text-slate-950 dark:text-slate-100 dark:group-hover:text-white">
+      <p className="mt-3 text-base leading-7 text-slate-800 transition group-hover:text-slate-950 dark:text-slate-100 dark:group-hover:text-white sm:text-lg">
         {value}
       </p>
     </a>
@@ -29,23 +30,23 @@ export default function ContactPage() {
   const contactLinks = [
     {
       label: t.contact.channels.email,
-      value: "adyatlenko5@gmail.com",
-      href: "mailto:adyatlenko5@gmail.com",
+      value: profileContacts.email,
+      href: `mailto:${profileContacts.email}`,
     },
     {
       label: t.contact.channels.linkedIn,
-      value: "linkedin.com/in/artem-diatlenko",
-      href: "https://www.linkedin.com/in/artem-diatlenko",
+      value: profileContacts.linkedInLabel,
+      href: profileContacts.linkedIn,
     },
     {
       label: t.contact.channels.github,
-      value: "github.com/ArtemDiatlenko",
-      href: "https://github.com/ArtemDiatlenko",
+      value: profileContacts.githubLabel,
+      href: profileContacts.github,
     },
     {
       label: t.contact.channels.phone,
-      value: "+48 888 813 842",
-      href: "tel:+48888813842",
+      value: profileContacts.phone,
+      href: profileContacts.phoneHref,
     },
   ];
 

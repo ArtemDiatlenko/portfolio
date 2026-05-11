@@ -2,8 +2,7 @@ import { type ReactNode } from "react";
 import PageIntro from "../components/PageIntro";
 import { useLanguage } from "../components/useLanguage";
 import ScrollReveal from "../components/ScrollReveal";
-
-const stack = ["Blazor", "Angular", "TypeScript", "React", "HTML", "CSS"];
+import { profileCoreStack } from "../profile";
 
 type SectionCardProps = {
   title: string;
@@ -59,7 +58,7 @@ export default function AboutPage() {
           <ScrollReveal mode="left">
             <SectionCard title={t.about.coreStack}>
               <div className="flex flex-wrap gap-3">
-                {stack.map((item) => (
+                {profileCoreStack.map((item) => (
                     <span
                       key={item}
                       className="skill-badge rounded-full px-4 py-2 text-sm"

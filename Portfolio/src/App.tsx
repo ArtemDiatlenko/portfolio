@@ -20,7 +20,7 @@ import LanguageSwitch from "./app/components/LanguageSwitch";
 import SiteFooter from "./app/components/SiteFooter";
 import ScrollToTopOnRouteChange from "./app/components/ScrollToTopOnRouteChange";
 import { LanguageProvider } from "./app/components/LanguageProvider";
-import { routeMetaByPath, siteLinks, type SiteRouteKey } from "./app/site";
+import { getRouteMetaKey, siteLinks, type SiteRouteKey } from "./app/site";
 import { useLanguage } from "./app/components/useLanguage";
 
 type NavItem = {
@@ -49,7 +49,7 @@ function RouteMeta() {
   const { t } = useLanguage();
 
   useEffect(() => {
-    const metaKey = routeMetaByPath[pathname] ?? "home";
+    const metaKey = getRouteMetaKey(pathname);
     const meta = t.meta[metaKey];
     document.title = meta.title;
 

@@ -18,3 +18,15 @@ export const footerLinks = siteLinks.filter((link) => link.key !== "home");
 export const routeMetaByPath: Record<string, SiteRouteKey> = Object.fromEntries(
   siteLinks.map((link) => [link.to, link.key]),
 ) as Record<string, SiteRouteKey>;
+
+function normalizePathname(pathname: string) {
+  if (!pathname || pathname === "/") {
+    return "/";
+  }
+
+  return pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+}
+
+export function getRouteMetaKey(pathname: string): SiteRouteKey {
+  return routeMetaByPath[normalizePathname(pathname)] ?? "home";
+}

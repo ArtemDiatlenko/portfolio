@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { footerLinks } from "../site";
 import { useLanguage } from "./useLanguage";
+import { profileContacts } from "../profile";
 
 type SocialLinkProps = {
   ariaLabel: string;
@@ -31,7 +32,7 @@ export default function SiteFooter() {
           {t.footer.rights}
         </p>
 
-        <nav className="relative z-10 flex flex-wrap gap-2 text-sm md:max-w-[28rem]">
+        <nav className="relative z-10 grid grid-cols-2 gap-x-5 gap-y-2 text-sm sm:flex sm:flex-wrap md:max-w-[28rem]">
           {footerLinks.map((item) => (
             <Link
               key={item.to}
@@ -45,7 +46,7 @@ export default function SiteFooter() {
         </nav>
 
         <div className="relative z-10 flex flex-wrap items-center gap-3">
-          <SocialLink href="mailto:adyatlenko5@gmail.com" ariaLabel="Email">
+          <SocialLink href={`mailto:${profileContacts.email}`} ariaLabel="Email">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -60,7 +61,7 @@ export default function SiteFooter() {
           </SocialLink>
 
           <SocialLink
-            href="https://www.linkedin.com/in/artem-diatlenko"
+            href={profileContacts.linkedIn}
             ariaLabel="LinkedIn"
           >
             <svg
@@ -74,7 +75,7 @@ export default function SiteFooter() {
           </SocialLink>
 
           <SocialLink
-            href="https://github.com/ArtemDiatlenko"
+            href={profileContacts.github}
             ariaLabel="GitHub"
           >
             <svg
